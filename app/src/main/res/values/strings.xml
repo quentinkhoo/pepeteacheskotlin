@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PepeTeachesKotlin</string>
+    <string name="lesson1">Lesson 1</string>
+    <string name="lesson1type">Basic Types</string>
+
+    <string name="lesson2">Lesson 2</string>
+    <string name="lesson2type">Packages and Imports</string>
+
+    <string name="lesson3">Lesson 3</string>
+    <string name="lesson3type">Control Flow</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="basicTypes">Basic Types</string>
+</resources>
