@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
+
     defaultConfig {
         applicationId "com.quentin.is3261.pepeteacheskotlin"
         minSdkVersion 24
@@ -19,6 +20,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -34,4 +40,21 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
 
+    implementation 'com.google.ar:core:1.4.0'
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.4.0"
+
+    implementation 'com.android.support:design:27.1.1'
+
 }
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+sceneform.asset('sampledata/pepe obj.obj',
+        'default',
+        'sampledata/pepe obj.sfa',
+        'src/main/assets/pepe obj')
+
+sceneform.asset('sampledata/model.obj',
+        'default',
+        'sampledata/model.sfa',
+        'src/main/assets/model')

@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         val cardviewlesson2 = findViewById<CardView>(R.id.cardviewlesson2)
         cardviewlesson2.setOnClickListener {
-            Toast.makeText(this, "In progress because we are lost children", Toast.LENGTH_LONG).show()
+            val myIntent = Intent(this, ARActivity::class.java)
+            startActivity(myIntent)
         }
 
         val cardviewlesson3 = findViewById<CardView>(R.id.cardviewlesson3)
