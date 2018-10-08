@@ -1,6 +1,8 @@
 package com.quentin.is3261.pepeteacheskotlin
 
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -20,6 +22,10 @@ private const val ARG_PARAM2 = "param2"
  */
 class BasicTypesPart7Fragment : Fragment() {
 
+    lateinit var sharedPreferences: SharedPreferences
+    private var myPreferences = "myPrefs"
+    private var unlockedAR = "unlockedAR"
+
     companion object {
         fun newInstance() = BasicTypesPart7Fragment()
     }
@@ -31,6 +37,12 @@ class BasicTypesPart7Fragment : Fragment() {
 
         val finishLesson1Button = myView.findViewById<Button>(R.id.finishlesson1_butt)
         finishLesson1Button.setOnClickListener {
+
+            sharedPreferences = this.getActivity()!!.getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putBoolean(unlockedAR, true)
+            editor.apply()
+
             getActivity()?.finish()
         }
 

@@ -126,7 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/lesson2" />
+                    android:text="@string/lesson3" />
 
                 <TextView
                     android:id="@+id/whileLoop"
@@ -135,6 +135,36 @@
                     android:layout_weight="1"
                     android:text="@string/lesson3type" />
             </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardviewAR_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:foregroundTintMode="add"
+        tools:foregroundTint="@android:color/darker_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ar_mode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/retarded_pepe" />
+
+            <TextView
+                android:id="@+id/ar_mode_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/ar_mode" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
