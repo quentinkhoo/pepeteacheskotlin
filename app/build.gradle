@@ -58,3 +58,9 @@ sceneform.asset('sampledata/model.obj',
         'default',
         'sampledata/model.sfa',
         'src/main/assets/model')
+
+
+sceneform.asset('sampledata/party_pepe.fbx',
+        'default',
+        'sampledata/party_pepe.sfa',
+        'src/main/assets/party_pepe')
