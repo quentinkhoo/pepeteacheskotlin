@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val cardviewlesson2 = findViewById<CardView>(R.id.cardviewlesson2)
         cardviewlesson2.setOnClickListener {
-            Toast.makeText(this, "In progress", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "In progress because we are lost children", Toast.LENGTH_LONG).show()
         }
     }
 }
