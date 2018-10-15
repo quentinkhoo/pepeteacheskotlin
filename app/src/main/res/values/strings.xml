@@ -9,7 +9,6 @@
     <string name="lesson3">Lesson 3</string>
     <string name="lesson3type">Control Flow</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="basicTypes">Basic Types</string>
 
@@ -18,4 +17,12 @@
     <string name="ar_device_support">This device does not support AR</string>
 
     <string name="ar_mode">Enter Augmented Reality with your unlocked PEPEs</string>
+    <string name="next">Next</string>
+
+    <string name="chapter1_lesson_numbers">Numbers</string>
+    <string name="chapter1_lesson_numbers_part1">The representation of numbers in Kotlin is pretty similar to Java,
+         however, Kotlin does not allow internal conversion of different data types.
+        Following table lists different variable lengths for different numbers.</string>
+
+
 </resources>

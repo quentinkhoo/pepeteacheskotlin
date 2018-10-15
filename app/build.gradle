@@ -54,13 +54,18 @@ sceneform.asset('sampledata/pepe obj.obj',
         'sampledata/pepe obj.sfa',
         'src/main/assets/pepe obj')
 
-sceneform.asset('sampledata/model.obj',
-        'default',
-        'sampledata/model.sfa',
-        'src/main/assets/model')
-
 
 sceneform.asset('sampledata/party_pepe.fbx',
         'default',
         'sampledata/party_pepe.sfa',
         'src/main/assets/party_pepe')
+
+sceneform.asset('sampledata/model.obj',
+        'default',
+        'sampledata/model.sfa',
+        'src/main/assets/model')
+
+sceneform.asset('sampledata/autistic_pepe.obj',
+        'default',
+        'sampledata/autistic_pepe.sfa',
+        'src/main/assets/autistic_pepe')

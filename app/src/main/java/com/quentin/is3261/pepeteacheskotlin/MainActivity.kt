@@ -20,13 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         val cardviewlesson1 = findViewById<CardView>(R.id.cardviewlesson1)
         cardviewlesson1.setOnClickListener {
-            val BasicTypesActivity = Intent(this, LessonBasicTypesActivity::class.java)
+            val BasicTypesActivity = Intent(this, BasicTypesActivity::class.java)
             startActivity(BasicTypesActivity)
         }
 
         val cardviewlesson2 = findViewById<CardView>(R.id.cardviewlesson2)
         cardviewlesson2.setOnClickListener {
-            Toast.makeText(this, "In progress lo", Toast.LENGTH_LONG).show()
+            val Lesson2Activity = Intent(this, Lesson2Activity::class.java)
+            startActivity(Lesson2Activity)
         }
 
         val cardviewlesson3 = findViewById<CardView>(R.id.cardviewlesson3)

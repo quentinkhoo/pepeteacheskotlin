@@ -38,7 +38,7 @@ class ARActivity : AppCompatActivity() {
 
         // Set the onclick lister for our button
         // Change this string to point to the .sfb file of your choice :)
-        floatingActionButton.setOnClickListener { addObject(Uri.parse("model.sfb")) }
+        floatingActionButton.setOnClickListener { addObject(Uri.parse("pepe obj.sfb")) }
         showFab(false)
 
     }
