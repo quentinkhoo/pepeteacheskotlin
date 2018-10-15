@@ -6,21 +6,13 @@ import android.support.v4.app.FragmentPagerAdapter
 
 class BasicTypeNumbersLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {
     override fun getCount(): Int {
-        return 7
+        return 2
     }
 
     override fun getItem(position: Int): Fragment? {
         return when (position) {
             0 -> BasicTypesNumbersLessonPart1.newInstance()
-            /*
-            0 -> BasicTypesPart1Fragment.newInstance()
-            1 -> BasicTypesPart2Fragment.newInstance()
-            2 -> BasicTypesPart3Fragment.newInstance()
-            3 -> BasicTypesPart4Fragment.newInstance()
-            4 -> BasicTypesPart5Fragment.newInstance()
-            5 -> BasicTypesPart6Fragment.newInstance()
-            6 -> BasicTypesPart7Fragment.newInstance()
-            */
+            1 -> BasicTypesNumbersLessonPart2.newInstance()
 
             else ->
                 BasicTypesNumbersLessonPart1.newInstance()
