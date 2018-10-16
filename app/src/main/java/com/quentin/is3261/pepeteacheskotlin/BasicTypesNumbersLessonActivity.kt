@@ -21,6 +21,8 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         pagerAdapter = BasicTypeNumbersLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
 
+        hideUnhideButton(viewPager.currentItem)
+
         viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
 
