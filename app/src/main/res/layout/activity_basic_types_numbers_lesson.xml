@@ -39,6 +39,16 @@
         android:layout_marginTop="40dp" />
 
     <ImageButton
+        android:id="@+id/butt_previous"
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pepe_previous_button" />
+
+    <ImageButton
         android:id="@+id/butt_next"
         android:layout_width="80dp"
         android:layout_height="84dp"
