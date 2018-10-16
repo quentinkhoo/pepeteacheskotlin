@@ -10,25 +10,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textSize="12sp"
         android:background="@null"
+        android:textStyle="bold"
         android:text="@string/chapter1_lesson_numbers" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="2"
         android:background="@null"
         android:text="@string/chapter1_lesson_numbers_part1"
-        android:textSize="8sp"
-        android:textStyle="bold" />
+        android:textSize="12sp"/>
 
     <TableLayout
         android:background="@null"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="4">
 
         <TableRow
             android:background="@null"
@@ -42,7 +42,8 @@
                 android:layout_weight="1"
                 android:text="Type"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/textViewSize"
@@ -50,6 +51,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Size"
+                android:textStyle="bold"
+                android:textSize="12sp"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -64,7 +67,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:text="Double" />
+                android:text="Double"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/textViewDoubleSize"
@@ -85,7 +89,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:text="Float" />
+                android:text="Float"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/textViewFloatSize"
@@ -93,6 +98,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="32" />
         </TableRow>
 
@@ -106,6 +112,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="Long" />
 
             <TextView
@@ -114,6 +121,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="64" />
         </TableRow>
 
@@ -127,6 +135,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="Int" />
 
             <TextView
@@ -148,6 +157,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="Short" />
 
             <TextView
@@ -156,6 +166,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="16" />
         </TableRow>
 
@@ -169,6 +180,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="Byte" />
 
             <TextView
@@ -177,6 +189,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
+                android:textSize="12sp"
                 android:text="8" />
         </TableRow>
 
