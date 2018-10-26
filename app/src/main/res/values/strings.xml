@@ -7,7 +7,7 @@
     <string name="lesson2type">Packages and Imports</string>
 
     <string name="lesson3">Lesson 3</string>
-    <string name="lesson3type">Control Flowwww</string>
+    <string name="lesson3type">Control Flow</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="basicTypes">Basic Types</string>
@@ -27,7 +27,6 @@
         works with different data types.</string>
     <string name="chapter1_lesson_numbers_part2_2">When you run the above piece of code in the coding ground,
         it will generate the following output.</string>
-
 
 
 </resources>

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val cardviewlesson1 = findViewById<CardView>(R.id.cardviewlesson1)
         cardviewlesson1.setOnClickListener {
-            val BasicTypesActivity = Intent(this, BasicTypesActivity::class.java)
+            val BasicTypesActivity = Intent(this, TestActivity::class.java)
             startActivity(BasicTypesActivity)
         }
 
