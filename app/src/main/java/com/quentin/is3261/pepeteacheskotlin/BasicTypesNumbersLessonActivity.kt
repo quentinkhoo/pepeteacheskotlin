@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 
 class BasicTypesNumbersLessonActivity : AppCompatActivity() {
 
@@ -47,20 +48,31 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
             viewPager.setCurrentItem(viewPager.currentItem - 1)
         }
 
+        val doneButton = findViewById<ImageButton>(R.id.butt_done)
+        doneButton.setOnClickListener {
+            Toast.makeText(this, "Doneeeeeee", Toast.LENGTH_LONG).show()
+        }
+
     }
 
     private fun hideUnhideButton(position: Int) {
         val prevButton = findViewById<ImageButton>(R.id.butt_previous)
         val nextButton = findViewById<ImageButton>(R.id.butt_next)
+        val doneButton = findViewById<ImageButton>(R.id.butt_done)
 
         if (position == pagerAdapter.count - 1) {
             nextButton.isClickable = false
             nextButton.visibility = View.INVISIBLE
+            doneButton.isClickable = true
+            doneButton.visibility = View.VISIBLE
         }
 
-        if (position != pagerAdapter.count - 1 && nextButton.visibility == View.INVISIBLE) {
+        if (position != pagerAdapter.count - 1 && nextButton.visibility == View.INVISIBLE
+                && doneButton.visibility == View.VISIBLE) {
             nextButton.visibility = View.VISIBLE
             nextButton.isClickable = true
+            doneButton.isClickable = false
+            doneButton.visibility = View.INVISIBLE
         }
 
         if (position == 0) {

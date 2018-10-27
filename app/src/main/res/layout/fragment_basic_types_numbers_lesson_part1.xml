@@ -14,6 +14,7 @@
         android:textSize="12sp"
         android:background="@null"
         android:textStyle="bold"
+        android:textColor="#fdfcfc"
         android:text="@string/chapter1_lesson_numbers" />
 
     <TextView
@@ -22,7 +23,8 @@
         android:layout_weight="2"
         android:background="@null"
         android:text="@string/chapter1_lesson_numbers_part1"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:textColor="#fdfcfc"/>
 
     <TableLayout
         android:background="@null"
@@ -43,7 +45,8 @@
                 android:text="Type"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewSize"
@@ -53,6 +56,7 @@
                 android:text="Size"
                 android:textStyle="bold"
                 android:textSize="12sp"
+                android:textColor="#fdfcfc"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -68,7 +72,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:text="Double"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewDoubleSize"
@@ -76,7 +81,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:text="64" />
+                android:text="64"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
         <TableRow
@@ -90,7 +96,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:text="Float"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewFloatSize"
@@ -99,7 +106,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="32" />
+                android:text="32"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
         <TableRow
@@ -113,7 +121,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="Long" />
+                android:text="Long"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewLongSize"
@@ -122,7 +131,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="64" />
+                android:text="64"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
         <TableRow
@@ -136,7 +146,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="Int" />
+                android:text="Int"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewIntSize"
@@ -144,7 +155,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:text="32" />
+                android:text="32"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
         <TableRow
@@ -158,7 +170,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="Short" />
+                android:text="Short"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewShortSize"
@@ -167,7 +180,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="16" />
+                android:text="16"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
         <TableRow
@@ -181,7 +195,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="Byte" />
+                android:text="Byte"
+                android:textColor="#fdfcfc"/>
 
             <TextView
                 android:id="@+id/textViewByteSize"
@@ -190,7 +205,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="12sp"
-                android:text="8" />
+                android:text="8"
+                android:textColor="#fdfcfc"/>
         </TableRow>
 
     </TableLayout>

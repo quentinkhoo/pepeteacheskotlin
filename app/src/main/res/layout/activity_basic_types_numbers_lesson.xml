@@ -58,4 +58,18 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/pepe_next_button" />
 
+    <ImageButton
+        android:id="@+id/butt_done"
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:clickable="false"
+        app:srcCompat="@drawable/pepe_done_button" />
+
+
+
 </RelativeLayout>
