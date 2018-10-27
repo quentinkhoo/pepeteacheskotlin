@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 
 class BasicTypesNumbersLessonActivity : AppCompatActivity() {
 
@@ -50,9 +52,15 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
 
         val doneButton = findViewById<ImageButton>(R.id.butt_done)
         doneButton.setOnClickListener {
-            Toast.makeText(this, "Doneeeeeee", Toast.LENGTH_LONG).show()
+            finishNumberLesson()
         }
 
+    }
+
+    private fun finishNumberLesson() {
+        val sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+        sharedPreferences.set("NumberLesson", true)
+        Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
     }
 
     private fun hideUnhideButton(position: Int) {

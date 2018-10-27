@@ -7,16 +7,18 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.CardView
 import android.widget.Toast
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var sharedPreferences: SharedPreferences
-    private var myPreferences = "myPrefs"
-    private var unlockedAR = "unlockedAR"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
 
         val cardviewlesson1 = findViewById<CardView>(R.id.cardviewlesson1)
         cardviewlesson1.setOnClickListener {
@@ -37,8 +39,8 @@ class MainActivity : AppCompatActivity() {
 
         val arMode = findViewById<CardView>(R.id.cardviewAR_mode)
         arMode.setOnClickListener {
-            sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
-            if (sharedPreferences.getBoolean(unlockedAR, false)) {
+
+            if (sharedPreferences.get("NumberLesson", false) == true) {
                 val myIntent = Intent(this, ARActivity::class.java)
                 startActivity(myIntent)
             } else {
