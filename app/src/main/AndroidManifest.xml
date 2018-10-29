@@ -26,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LessonBasicTypesActivity" />
         <activity android:name=".ARActivity" />
         <activity android:name=".Lesson2Activity" />
         <activity android:name=".BasicTypesActivity" />

@@ -6,46 +6,44 @@ import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.CardView
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.widget.Adapter
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
+    private val REQUEST_CODE = 1
+
     lateinit var sharedPreferences: SharedPreferences
+    lateinit var recyclerView: RecyclerView
+    lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var adapter: MainRecyclerAdapter
+    lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        progressBar = findViewById(R.id.progressBar)
+
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+        layoutManager = LinearLayoutManager(this)
+        recyclerView = findViewById(R.id.recyclerViewMain)
+        recyclerView.layoutManager = layoutManager
+        adapter = MainRecyclerAdapter(this)
+        recyclerView.adapter = adapter
+    }
 
-        val cardviewlesson1 = findViewById<CardView>(R.id.cardviewlesson1)
-        cardviewlesson1.setOnClickListener {
-            val BasicTypesActivity = Intent(this, BasicTypesActivity::class.java)
-            startActivity(BasicTypesActivity)
-        }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == REQUEST_CODE) {
+            var progress = 5
+            progressBar.setProgress(progress)
 
-        val cardviewlesson2 = findViewById<CardView>(R.id.cardviewlesson2)
-        cardviewlesson2.setOnClickListener {
-            val Lesson2Activity = Intent(this, Lesson2Activity::class.java)
-            startActivity(Lesson2Activity)
-        }
-
-        val cardviewlesson3 = findViewById<CardView>(R.id.cardviewlesson3)
-        cardviewlesson3.setOnClickListener {
-            Toast.makeText(this, "In progress lo", Toast.LENGTH_LONG).show()
-        }
-
-        val arMode = findViewById<CardView>(R.id.cardviewAR_mode)
-        arMode.setOnClickListener {
-
-            if (sharedPreferences.get("NumberLesson", false) == true) {
-                val myIntent = Intent(this, ARActivity::class.java)
-                startActivity(myIntent)
-            } else {
-                Toast.makeText(this, "You have yet to unlock AR Mode.", Toast.LENGTH_LONG).show()
-            }
         }
     }
 }
