@@ -5,16 +5,17 @@ import android.os.Bundle
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
+import nl.dionsegijn.konfetti.KonfettiView
 
 class BasicTypesNumbersLessonActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager
     private lateinit var pagerAdapter: PagerAdapter
+    private lateinit var pepeHelper: PepeTeachesKotlinHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,8 +61,13 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
     private fun finishNumberLesson() {
         val sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
         sharedPreferences.set("NumberLesson", true)
+
         Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
+        val konfetti = findViewById<KonfettiView>(R.id.konfettiView)
+        pepeHelper.throwConfetti(konfetti)
+
     }
+
 
     private fun hideUnhideButton(position: Int) {
         val prevButton = findViewById<ImageButton>(R.id.butt_previous)
