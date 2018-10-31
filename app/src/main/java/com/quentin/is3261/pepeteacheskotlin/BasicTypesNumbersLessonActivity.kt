@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.Toolbar
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 import nl.dionsegijn.konfetti.KonfettiView
@@ -32,6 +34,7 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.numbers_viewpager)
         pagerAdapter = BasicTypeNumbersLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
+        pepeHelper = PepeTeachesKotlinHelper()
 
         prevButton = findViewById<ImageButton>(R.id.butt_previous)
         nextButton = findViewById<ImageButton>(R.id.butt_next)
@@ -39,6 +42,8 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         konfetti = findViewById<KonfettiView>(R.id.konfettiView)
 
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         hideUnhideButton(viewPager.currentItem)
 
@@ -68,6 +73,15 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
             finishNumberLesson()
         }
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return if (item?.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
     }
 
     private fun finishNumberLesson() {
