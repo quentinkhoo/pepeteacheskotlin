@@ -1,5 +1,6 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.PagerAdapter
@@ -17,6 +18,13 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
     private lateinit var pagerAdapter: PagerAdapter
     private lateinit var pepeHelper: PepeTeachesKotlinHelper
 
+    private lateinit var prevButton: ImageButton
+    private lateinit var nextButton: ImageButton
+    private lateinit var doneButton: ImageButton
+    private lateinit var konfetti: KonfettiView
+
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_types_numbers_lesson)
@@ -24,6 +32,13 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.numbers_viewpager)
         pagerAdapter = BasicTypeNumbersLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
+
+        prevButton = findViewById<ImageButton>(R.id.butt_previous)
+        nextButton = findViewById<ImageButton>(R.id.butt_next)
+        doneButton = findViewById<ImageButton>(R.id.butt_done)
+        konfetti = findViewById<KonfettiView>(R.id.konfettiView)
+
+        sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
 
         hideUnhideButton(viewPager.currentItem)
 
@@ -41,17 +56,14 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
             }
         })
 
-        val nextButton = findViewById<ImageButton>(R.id.butt_next)
         nextButton.setOnClickListener {
             viewPager.setCurrentItem(viewPager.currentItem + 1)
         }
 
-        val prevButton = findViewById<ImageButton>(R.id.butt_previous)
         prevButton.setOnClickListener {
             viewPager.setCurrentItem(viewPager.currentItem - 1)
         }
 
-        val doneButton = findViewById<ImageButton>(R.id.butt_done)
         doneButton.setOnClickListener {
             finishNumberLesson()
         }
@@ -59,20 +71,14 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
     }
 
     private fun finishNumberLesson() {
-        val sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
         sharedPreferences.set("NumberLesson", true)
-
         Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
-        val konfetti = findViewById<KonfettiView>(R.id.konfettiView)
         pepeHelper.throwConfetti(konfetti)
 
     }
 
 
     private fun hideUnhideButton(position: Int) {
-        val prevButton = findViewById<ImageButton>(R.id.butt_previous)
-        val nextButton = findViewById<ImageButton>(R.id.butt_next)
-        val doneButton = findViewById<ImageButton>(R.id.butt_done)
 
         if (position == pagerAdapter.count - 1) {
             nextButton.isClickable = false
