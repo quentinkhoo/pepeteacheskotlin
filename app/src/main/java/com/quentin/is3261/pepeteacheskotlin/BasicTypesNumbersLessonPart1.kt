@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_basic_types_numbers_lesson_part1.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,7 +27,11 @@ class BasicTypesNumbersLessonPart1 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_basic_types_numbers_lesson_part1, container, false)
+        val myView = inflater.inflate(R.layout.fragment_basic_types_numbers_lesson_part1, container, false)
+        myView.numberChapter.setText("")
+        myView.numberChapter.setCharacterDelay(150)
+        myView.numberChapter.animateText(getString(R.string.chapter1_lesson_numbers))
+        return myView
     }
 
 

@@ -7,7 +7,8 @@
     tools:context=".BasicTypesNumbersLessonPart1">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+        android:id="@+id/numberChapter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

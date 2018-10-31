@@ -4,6 +4,7 @@ import android.graphics.Color
 import nl.dionsegijn.konfetti.KonfettiView
 
 class PepeTeachesKotlinHelper {
+
     fun throwConfetti(konfetti: KonfettiView) {
         konfetti.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
