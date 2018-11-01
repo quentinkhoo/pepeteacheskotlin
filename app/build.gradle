@@ -47,6 +47,8 @@ dependencies {
 
     implementation 'nl.dionsegijn:konfetti:1.1.2'
 
+    implementation 'cn.dreamtobe.messagehandler:messagehandler:0.1.1'
+
 }
 
 apply plugin: 'com.google.ar.sceneform.plugin'

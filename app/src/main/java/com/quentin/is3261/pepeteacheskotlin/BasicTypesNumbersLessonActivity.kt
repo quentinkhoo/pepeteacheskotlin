@@ -7,6 +7,7 @@ import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.Toast
 import android.widget.Toolbar

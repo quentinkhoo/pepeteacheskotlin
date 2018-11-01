@@ -16,7 +16,7 @@ class BasicTypeNumbersLessonPagerAdapter(fragmentManager: FragmentManager): Frag
             2 -> BasicTypesNumbersLessonPart3.newInstance()
 
             else ->
-                BasicTypesNumbersLessonPart1.newInstance()
+                null
         }
     }
 
