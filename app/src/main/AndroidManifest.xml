@@ -31,7 +31,8 @@
         <activity android:name=".BasicTypesActivity" />
         <activity android:name=".BasicTypesNumbersLessonActivity" />
         <activity android:name=".TestActivity" />
-        <activity android:name=".BasicTypesCharactersLessonActivity"></activity>
+        <activity android:name=".BasicTypesCharactersLessonActivity" />
+        <activity android:name=".BasicTypesQuizActivity"></activity>
     </application>
 
 </manifest>

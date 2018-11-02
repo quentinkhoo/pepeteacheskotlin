@@ -27,6 +27,12 @@ class BasicTypesActivity : AppCompatActivity() {
             startActivity(charIntent)
         }
 
+        val quizButton = findViewById<CardView>(R.id.card_quiz)
+        quizButton.setOnClickListener {
+            val quizIntent = Intent(this, BasicTypesQuizActivity::class.java)
+            startActivity(quizIntent)
+        }
+
 
     }
 
