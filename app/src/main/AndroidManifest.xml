@@ -30,7 +30,8 @@
         <activity android:name=".Lesson2Activity" />
         <activity android:name=".BasicTypesActivity" />
         <activity android:name=".BasicTypesNumbersLessonActivity" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".BasicTypesCharactersLessonActivity"></activity>
     </application>
 
 </manifest>

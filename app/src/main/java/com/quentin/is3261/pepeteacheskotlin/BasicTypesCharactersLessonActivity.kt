@@ -7,15 +7,12 @@ import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.MenuItem
 import android.view.View
-import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.Toast
-import android.widget.Toolbar
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
-import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 import nl.dionsegijn.konfetti.KonfettiView
 
-class BasicTypesNumbersLessonActivity : AppCompatActivity() {
+class BasicTypesCharactersLessonActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager
     private lateinit var pagerAdapter: PagerAdapter
@@ -30,10 +27,10 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_basic_types_numbers_lesson)
+        setContentView(R.layout.activity_basic_types_characters_lesson)
 
-        viewPager = findViewById(R.id.numbers_viewpager)
-        pagerAdapter = BasicTypeNumbersLessonPagerAdapter(supportFragmentManager)
+        viewPager = findViewById(R.id.characters_viewpager)
+        pagerAdapter = BasicTypeCharactersLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
         pepeHelper = PepeTeachesKotlinHelper()
 
@@ -71,7 +68,7 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         }
 
         doneButton.setOnClickListener {
-            finishNumberLesson()
+            finishCharacterLesson()
         }
 
     }
@@ -85,12 +82,11 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
         }
     }
 
-    private fun finishNumberLesson() {
-        sharedPreferences.set("NumberLesson", true)
-        Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
+    private fun finishCharacterLesson() {
+        sharedPreferences.set("CharacterLesson", true)
+        Toast.makeText(this, "You have finished Character Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
     }
-
 
     private fun hideUnhideButton(position: Int) {
 

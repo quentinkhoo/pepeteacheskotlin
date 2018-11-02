@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BasicTypesCharactersLessonPart1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/characterLesson1Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:textColor="#fdfcfc"
+        android:text="@string/chapter1_lesson_characters_part1" />
+
+    <ImageView
+        android:id="@+id/characterLesson1Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:scaleType="fitXY"
+        android:src="@drawable/characters_lesson1" />
+
+    <TextView
+        android:id="@+id/characterLesson2Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:textColor="#fdfcfc"
+        android:text="@string/chapter1_lesson_characters_part2" />
+
+    <ImageView
+        android:id="@+id/characterLesson2Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/characters_lesson2" />
+</LinearLayout>

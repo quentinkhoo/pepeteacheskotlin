@@ -20,6 +20,12 @@ class BasicTypesActivity : AppCompatActivity() {
             val numberIntent = Intent(this, BasicTypesNumbersLessonActivity::class.java)
             startActivity(numberIntent)
         }
+
+        val characterButton = findViewById<CardView>(R.id.card_characters)
+        characterButton.setOnClickListener {
+            val charIntent = Intent(this, BasicTypesCharactersLessonActivity::class.java)
+            startActivity(charIntent)
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

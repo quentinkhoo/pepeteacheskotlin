@@ -22,11 +22,16 @@
     <string name="chapter1_lesson_numbers">Numbers</string>
     <string name="chapter1_lesson_numbers_part1">The representation of numbers in Kotlin is pretty similar to Java,
          however, Kotlin does not allow internal conversion of different data types.
-        Following table lists different variable lengths for different numbers.</string>
+        The following table lists different variable lengths for different numbers.</string>
     <string name="chapter1_lesson_numbers_part2_1">In the following example, we will see how Kotlin
         works with different data types.</string>
-    <string name="chapter1_lesson_numbers_part2_2">When you run the above piece of code in the coding ground,
+    <string name="chapter1_lesson_numbers_part2_2">When you run the piece of code as shown previously,
         it will generate the following output.</string>
 
+    <string name="chapter1_lesson_characters">Characters</string>
+    <string name="chapter1_lesson_characters_part1">Kotlin represents character using char.
+        A character should be declared in a single quote like \'c\'.</string>
+    <string name="chapter1_lesson_characters_part2">When you run the piece of code as shown previously,
+        it will generate the following output.</string>
 
 </resources>
