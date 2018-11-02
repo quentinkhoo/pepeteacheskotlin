@@ -26,6 +26,8 @@ class BasicTypesActivity : AppCompatActivity() {
             val charIntent = Intent(this, BasicTypesCharactersLessonActivity::class.java)
             startActivity(charIntent)
         }
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
