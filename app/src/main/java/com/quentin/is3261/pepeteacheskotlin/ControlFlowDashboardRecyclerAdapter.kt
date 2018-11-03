@@ -19,10 +19,10 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
         val REQUEST_CODE = 998
     }
 
-    private val itemImages = intArrayOf(R.drawable.number, R.drawable.alphabet, R.drawable.venn_diagram,
-            R.drawable.chat, R.drawable.array_edited)
+    private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.`when`, R.drawable.for_loop,
+            R.drawable.while_loop, R.drawable.`return`, R.drawable.break_and_continue)
 
-    private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return, Break, Continue")
+    private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return", "Break & Continue")
 
     lateinit var sharedPreferences: SharedPreferences
 
@@ -65,7 +65,6 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                         2 -> {
                             myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
-
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }
