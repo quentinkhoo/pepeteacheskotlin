@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private val REQUEST_CODE = 1
 
+    private val QUIZ_REQUEST_CODE = 999
+
     lateinit var sharedPreferences: SharedPreferences
     lateinit var recyclerView: RecyclerView
     lateinit var layoutManager: RecyclerView.LayoutManager
@@ -43,7 +45,11 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == REQUEST_CODE) {
             var progress = 5
             progressBar.setProgress(progress)
-
         }
+         if (requestCode == QUIZ_REQUEST_CODE) {
+             finish()
+             val myIntent = Intent(this, MainActivity::class.java)
+             startActivity(myIntent)
+         }
     }
 }

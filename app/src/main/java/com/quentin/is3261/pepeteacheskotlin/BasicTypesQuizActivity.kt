@@ -176,6 +176,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
         sharedPreferences.set("BasicQuizComplete", true)
         Toast.makeText(this, "You have completed Basic Quiz!", Toast.LENGTH_LONG).show()
         pepeHelper.throwConfetti(konfetti)
+        finishActivity(999)
     }
 
 }
