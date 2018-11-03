@@ -15,46 +15,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/butt_a"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="12sp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/butt_b"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="12sp"
                 android:layout_weight="1" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/butt_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="12sp"
                 android:layout_weight="1"/>
 
             <Button
                 android:id="@+id/butt_d"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="12sp"
                 android:layout_weight="1"/>
-        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
