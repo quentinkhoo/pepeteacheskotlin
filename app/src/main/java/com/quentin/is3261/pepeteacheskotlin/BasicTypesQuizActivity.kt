@@ -3,16 +3,16 @@ package com.quentin.is3261.pepeteacheskotlin
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.view.PagerAdapter
-import android.support.v4.view.ViewPager
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
+import android.widget.Toast
+
+
+
+
 
 class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -76,11 +76,31 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    private fun wrongAnswerStuff() {
+        val inflater = layoutInflater
+
+        val layout = inflater.inflate(R.layout.wrong_answer_toast, findViewById(R.id.wrong_answer_toast_container))
+        val toast = Toast(applicationContext)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = layout
+        toast.show()
+    }
+
+    private fun correctAnswerStuff() {
+        val inflater = layoutInflater
+
+        val layout = inflater.inflate(R.layout.correct_answer_toast, findViewById(R.id.correct_answer_toast_container))
+        val toast = Toast(applicationContext)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = layout
+        toast.show()
+    }
+
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.butt_a ->
                 if (optionA.text.equals(answer)) {
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    correctAnswerStuff()
                     if (currentQuestion < 4) {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
@@ -88,11 +108,11 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         unhideButton()
                     }
                 } else {
-                    optionA.setBackgroundColor(getResources().getColor(R.color.red))
+                    wrongAnswerStuff()
                 }
             R.id.butt_b ->
                 if (optionB.text.equals(answer)) {
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    correctAnswerStuff()
                     if (currentQuestion < 4) {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
@@ -100,11 +120,11 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         unhideButton()
                     }
                 } else {
-                    optionB.setBackgroundColor(getResources().getColor(R.color.red))
+                    wrongAnswerStuff()
                 }
             R.id.butt_c ->
                 if (optionC.text.equals(answer)) {
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    correctAnswerStuff()
                     if (currentQuestion < 4) {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
@@ -112,11 +132,11 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         unhideButton()
                     }
                 } else {
-                    optionC.setBackgroundColor(getResources().getColor(R.color.red))
+                    wrongAnswerStuff()
                 }
             R.id.butt_d ->
                 if (optionD.text.equals(answer)) {
-                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    correctAnswerStuff()
                     if (currentQuestion < 4) {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
@@ -124,7 +144,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         unhideButton()
                     }
                 } else {
-                    optionD.setBackgroundColor(getResources().getColor(R.color.red))
+                    wrongAnswerStuff()
                 }
         }
     }
