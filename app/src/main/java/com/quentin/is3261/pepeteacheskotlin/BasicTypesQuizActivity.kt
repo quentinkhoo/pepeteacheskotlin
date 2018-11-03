@@ -81,32 +81,48 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
             R.id.butt_a ->
                 if (optionA.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
-                    currentQuestion++
-                    setUpQuestion(currentQuestion)
+                    if (currentQuestion < 4) {
+                        currentQuestion++
+                        setUpQuestion(currentQuestion)
+                    } else {
+                        unhideButton()
+                    }
                 } else {
                     optionA.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_b ->
                 if (optionB.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
-                    currentQuestion++
-                    setUpQuestion(currentQuestion)
+                    if (currentQuestion < 4) {
+                        currentQuestion++
+                        setUpQuestion(currentQuestion)
+                    } else {
+                        unhideButton()
+                    }
                 } else {
                     optionB.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_c ->
                 if (optionC.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
-                    currentQuestion++
-                    setUpQuestion(currentQuestion)
+                    if (currentQuestion < 4) {
+                        currentQuestion++
+                        setUpQuestion(currentQuestion)
+                    } else {
+                        unhideButton()
+                    }
                 } else {
                     optionC.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_d ->
                 if (optionD.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
-                    currentQuestion++
-                    setUpQuestion(currentQuestion)
+                    if (currentQuestion < 4) {
+                        currentQuestion++
+                        setUpQuestion(currentQuestion)
+                    } else {
+                        unhideButton()
+                    }
                 } else {
                     optionD.setBackgroundColor(getResources().getColor(R.color.red))
                 }
@@ -122,7 +138,16 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun unhideButton() {
+        doneButton.isClickable = true
+        doneButton.visibility = View.VISIBLE
+        doneButton.setOnClickListener {
+            finishQuiz()
+        }
+    }
+
     private fun setUpQuestion(currentQuestion: Int) {
+
         question.setText(getString(questionBank.get(currentQuestion)))
         optionA.setText(getString(optionAs.get(currentQuestion)))
         optionB.setText(getString(optionBs.get(currentQuestion)))
@@ -133,7 +158,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun finishQuiz() {
         sharedPreferences.set("BasicQuizComplete", true)
-        Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "You have completed Basic Quiz!", Toast.LENGTH_LONG).show()
         pepeHelper.throwConfetti(konfetti)
     }
 

@@ -43,12 +43,13 @@
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:textColor="#fdfcfc"
             android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="vertical">
 
 
@@ -60,12 +61,14 @@
 
                 <Button
                     android:id="@+id/butt_a"
+                    android:textAllCaps="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/butt_b"
+                    android:textAllCaps="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
@@ -79,12 +82,14 @@
 
                 <Button
                     android:id="@+id/butt_c"
+                    android:textAllCaps="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/butt_d"
+                    android:textAllCaps="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
