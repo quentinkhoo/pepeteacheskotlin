@@ -14,7 +14,7 @@ import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
 
-class BasicTypesQuizActivity : AppCompatActivity() {
+class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var question: TextView
     private lateinit var optionA: Button
@@ -71,6 +71,37 @@ class BasicTypesQuizActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        setUpQuestion(0)
+
+    }
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.butt_a ->
+                if (optionA.text.equals(answer)) {
+                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                } else {
+                    optionA.setBackgroundColor(getResources().getColor(R.color.red))
+                }
+            R.id.butt_b ->
+                if (optionB.text.equals(answer)) {
+                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                } else {
+                    optionB.setBackgroundColor(getResources().getColor(R.color.red))
+                }
+            R.id.butt_c ->
+                if (optionC.text.equals(answer)) {
+                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                } else {
+                    optionB.setBackgroundColor(getResources().getColor(R.color.red))
+                }
+            R.id.butt_d ->
+                if (optionD.text.equals(answer)) {
+                    Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                } else {
+                    optionD.setBackgroundColor(getResources().getColor(R.color.red))
+                }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -80,6 +111,15 @@ class BasicTypesQuizActivity : AppCompatActivity() {
         } else {
             super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun setUpQuestion(currentQuestion: Int) {
+        question.setText(getString(questionBank.get(currentQuestion)))
+        optionA.setText(getString(optionAs.get(currentQuestion)))
+        optionB.setText(getString(optionBs.get(currentQuestion)))
+        optionC.setText(getString(optionCs.get(currentQuestion)))
+        optionD.setText(getString(optionDs.get(currentQuestion)))
+        answer = getString(answers.get(currentQuestion))
     }
 
     private fun finishQuiz() {
