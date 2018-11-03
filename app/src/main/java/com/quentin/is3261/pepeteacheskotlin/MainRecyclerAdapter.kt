@@ -93,7 +93,7 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                         }
                         2 -> {
                             if (sharedPreferences.get("BasicQuizComplete")?: false == true) {
-                                myIntent = Intent(context, Lesson2Activity::class.java)
+                                myIntent = Intent(context, ControlFlowActivity::class.java)
                                 (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
                             } else {
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
