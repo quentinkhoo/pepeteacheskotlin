@@ -4,10 +4,18 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.CardView
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.MenuItem
 import android.widget.Button
 
 class BasicTypesActivity : AppCompatActivity() {
+
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var adapter: DashboardRecyclerAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,23 +23,11 @@ class BasicTypesActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val numberButton = findViewById<CardView>(R.id.card_numbers)
-        numberButton.setOnClickListener {
-            val numberIntent = Intent(this, BasicTypesNumbersLessonActivity::class.java)
-            startActivity(numberIntent)
-        }
-
-        val characterButton = findViewById<CardView>(R.id.card_characters)
-        characterButton.setOnClickListener {
-            val charIntent = Intent(this, BasicTypesCharactersLessonActivity::class.java)
-            startActivity(charIntent)
-        }
-
-        val quizButton = findViewById<CardView>(R.id.card_quiz)
-        quizButton.setOnClickListener {
-            val quizIntent = Intent(this, BasicTypesQuizActivity::class.java)
-            startActivity(quizIntent)
-        }
+        layoutManager = GridLayoutManager(this, 2)
+        recyclerView = findViewById(R.id.recyclerViewDashboard)
+        recyclerView.layoutManager = layoutManager
+        adapter = DashboardRecyclerAdapter(this)
+        recyclerView.adapter = adapter
 
 
     }
