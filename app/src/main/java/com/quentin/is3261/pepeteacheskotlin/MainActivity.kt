@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val REQUEST_CODE = 1
+    private val PROGRESS_REQUEST_CODE = 1
 
     private val QUIZ_REQUEST_CODE = 999
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == PROGRESS_REQUEST_CODE) {
             var progress = 5
             progressBar.setProgress(progress)
         }

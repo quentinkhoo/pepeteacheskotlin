@@ -20,10 +20,10 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
         val REQUEST_CODE = 999
     }
 
-    private val itemImages = intArrayOf(R.drawable.party_pepe, R.drawable.pepe_oop,
+    private val itemImages = intArrayOf(R.drawable.thinking_pepe, R.drawable.party_pepe, R.drawable.pepe_oop,
             R.drawable.stressed_out_pepe_2, R.drawable.retarded_pepe)
 
-    private val itemTitles = arrayOf("Lesson 1: Basic Types", "Lesson 2: Control Flow", "Lesson 3: Class & Object",
+    private val itemTitles = arrayOf("Try out Kotlin!", "Lesson 1: Basic Types", "Lesson 2: Control Flow", "Lesson 3: Class & Object",
             "Augmented Reality: Enter Pepe Land")
 
     private val unlockedIcon = R.drawable.icon_unlock
@@ -49,16 +49,18 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
         if (position == 0)
             holder.itemUnlock.setImageResource(unlockedIcon)
         if (position == 1)
+            holder.itemUnlock.setImageResource(unlockedIcon)
+        if (position == 2)
             if (sharedPreferences.get("BasicQuizComplete")?: false == true)
                 holder.itemUnlock.setImageResource(unlockedIcon)
             else
                 holder.itemUnlock.setImageResource(lockedIcon)
-        if (position == 2)
+        if (position == 3)
             if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true)
                 holder.itemUnlock.setImageResource(unlockedIcon)
             else
                 holder.itemUnlock.setImageResource(lockedIcon)
-        if (position == 3)
+        if (position == 4)
             if (sharedPreferences.get("BasicQuizComplete")?: false == true)
                 holder.itemUnlock.setImageResource(unlockedIcon)
             else
@@ -81,11 +83,15 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                     val position = getAdapterPosition()
                     when (position) {
                         0 -> {
+                            myIntent = Intent(context, TryKotlinActivity::class.java)
+                            (context as Activity).startActivity(myIntent)
+                        }
+                        1 -> {
                             myIntent = Intent(context, BasicTypesActivity::class.java)
                             //context.startActivity(myIntent);
                             (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
                         }
-                        1 -> {
+                        2 -> {
                             if (sharedPreferences.get("BasicQuizComplete")?: false == true) {
                                 myIntent = Intent(context, Lesson2Activity::class.java)
                                 (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
@@ -93,7 +99,7 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
                             }
                         }
-                        2 -> {
+                        3 -> {
                             if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true) {
                                 myIntent = Intent(context, Lesson2Activity::class.java)
                                 (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
@@ -101,10 +107,10 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
                             }
                         }
-                        3 -> {
+                        4 -> {
                             myIntent = Intent(context, ARActivity::class.java)
                             if (sharedPreferences.get("BasicQuizComplete", false) == true) {
-                                (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                                (context as Activity).startActivity(myIntent)
                             } else {
                                 Toast.makeText(context, "You have yet to unlock AR Mode.", Toast.LENGTH_LONG).show()
                             }
