@@ -46,8 +46,23 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemImage.setImageResource(itemImages.get(position))
         holder.itemTitle.text = itemTitles.get(position)
-        holder.itemUnlock.setImageResource(unlockedIcon)
-
+        if (position == 0)
+            holder.itemUnlock.setImageResource(unlockedIcon)
+        if (position == 1)
+            if (sharedPreferences.get("BasicQuizComplete")?: false == true)
+                holder.itemUnlock.setImageResource(unlockedIcon)
+            else
+                holder.itemUnlock.setImageResource(lockedIcon)
+        if (position == 2)
+            if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true)
+                holder.itemUnlock.setImageResource(unlockedIcon)
+            else
+                holder.itemUnlock.setImageResource(lockedIcon)
+        if (position == 3)
+            if (sharedPreferences.get("BasicQuizComplete")?: false == true)
+                holder.itemUnlock.setImageResource(unlockedIcon)
+            else
+                holder.itemUnlock.setImageResource(lockedIcon)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

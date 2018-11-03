@@ -10,10 +10,6 @@ import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
 import android.widget.Toast
 
-
-
-
-
 class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var question: TextView
