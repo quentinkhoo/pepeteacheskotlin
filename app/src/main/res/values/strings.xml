@@ -19,6 +19,36 @@
     <string name="ar_mode">Enter Augmented Reality with your unlocked PEPEs</string>
     <string name="next">Next</string>
 
+    <string name="chapter1_quiz_1">Which of the following is not a valid data type in kotlin?</string>
+    <string name="chapter1_quiz_1_a">Val</string> <!--Answer -->
+    <string name="chapter1_quiz_1_b">Integer</string>
+    <string name="chapter1_quiz_1_c">Collection</string>
+    <string name="chapter1_quiz_1_d">String</string>
+
+    <string name="chapter1_quiz_2">Which of the following is a valid way to declare an integer in Kotlin </string>
+    <string name="chapter1_quiz_2_a">let i = 42</string>
+    <string name="chapter1_quiz_2_b">var i: int = 42</string>
+    <string name="chapter1_quiz_2_c">var i: Int = 42</string> <!--Answer -->
+    <string name="chapter1_quiz_2_d">int i = 42</string>
+
+    <string name="chapter1_quiz_3">Which of the following is an invalid range </string>
+    <string name="chapter1_quiz_3_a">val range1 = 1..10</string>
+    <string name="chapter1_quiz_3_b">val range2 = "A".."Z"</string>
+    <string name="chapter1_quiz_3_c">val twoTo20 = 2.rangeTo(20)</string>
+    <string name="chapter1_quiz_3_d">None of the above</string> <!--Answer -->
+
+    <string name="chapter1_quiz_4">Which of the following statements about val and var is correct</string>
+    <string name="chapter1_quiz_4_a">Variables declared with val are final</string> <!--Answer -->
+    <string name="chapter1_quiz_4_b">Variables declared with var are final</string>
+    <string name="chapter1_quiz_4_c">Variables declared with val cannot be null</string>
+    <string name="chapter1_quiz_4_d">None of the above</string>
+
+    <string name="chapter1_quiz_5">What is the correct syntax to convert the String "42" to Long in Kotlin</string>
+    <string name="chapter1_quiz_5_a">val l: Long = Long.parseInt("42")</string>
+    <string name="chapter1_quiz_5_b">val l: Long = (Long)"42"</string>
+    <string name="chapter1_quiz_5_c">val l: Long = &lt;Long&gt;"42"</string>
+    <string name="chapter1_quiz_5_d">val l: Long = "42".toLong()</string> <!--Answer -->
+
     <string name="chapter1_lesson_numbers">Numbers</string>
     <string name="chapter1_lesson_numbers_part1">The representation of numbers in Kotlin is pretty similar to Java,
          however, Kotlin does not allow internal conversion of different data types.
