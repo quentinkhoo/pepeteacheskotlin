@@ -29,14 +29,68 @@
     </FrameLayout>
     -->
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/basic_quiz_viewpager"
-        android:layout_width="wrap_content"
-        android:layout_height="248dp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_height="228dp"
         android:layout_centerInParent="false"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="40dp" >
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/butt_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/butt_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/butt_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/butt_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/butt_previous"

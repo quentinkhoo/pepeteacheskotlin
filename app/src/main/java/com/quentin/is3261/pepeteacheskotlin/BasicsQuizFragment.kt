@@ -1,6 +1,5 @@
 package com.quentin.is3261.pepeteacheskotlin
 
-
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -60,13 +59,14 @@ class BasicsQuizFragment() : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_quiz, container, false)
+        val position = this.arguments!!.getInt("position")
 
         question = view.findViewById<TextView>(R.id.question)
         optionA = view.findViewById<Button>(R.id.butt_a)
         optionB = view.findViewById<Button>(R.id.butt_b)
         optionC = view.findViewById<Button>(R.id.butt_c)
         optionD = view.findViewById<Button>(R.id.butt_d)
-        setUpQuestion(this.arguments!!.getInt("position"))
+        setUpQuestion(position)
 
         return view
     }
@@ -78,6 +78,14 @@ class BasicsQuizFragment() : Fragment() {
         optionC.setText(getString(optionCs.get(position)))
         optionD.setText(getString(optionDs.get(position)))
         answer = getString(answers.get(position))
+    }
+
+    private fun handleAnswer(position: Int) {
+        optionA.setOnClickListener {
+            if (!optionA.text.equals(answer)) {
+
+            }
+        }
     }
 
 }
