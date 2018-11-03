@@ -30,7 +30,7 @@
     -->
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/characters_viewpager"
+        android:id="@+id/basic_quiz_viewpager"
         android:layout_width="wrap_content"
         android:layout_height="248dp"
         android:layout_centerInParent="false"

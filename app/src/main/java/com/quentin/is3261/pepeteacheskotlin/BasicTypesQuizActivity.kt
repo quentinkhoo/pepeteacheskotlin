@@ -29,8 +29,8 @@ class BasicTypesQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_types_quiz)
 
-        viewPager = findViewById(R.id.numbers_viewpager)
-        pagerAdapter = BasicTypeNumbersLessonPagerAdapter(supportFragmentManager)
+        viewPager = findViewById(R.id.basic_quiz_viewpager)
+        pagerAdapter = BasicTypesQuizPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
         pepeHelper = PepeTeachesKotlinHelper()
 
