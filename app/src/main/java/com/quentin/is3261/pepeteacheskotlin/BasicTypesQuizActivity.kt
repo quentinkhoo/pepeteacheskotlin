@@ -22,6 +22,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var optionC: Button
     private lateinit var optionD: Button
     private lateinit var answer: String
+    private var currentQuestion: Int = 0
 
     private val questionBank = arrayOf(R.string.chapter1_quiz_1, R.string.chapter1_quiz_2, R.string.chapter1_quiz_3,
             R.string.chapter1_quiz_4, R.string.chapter1_quiz_5)
@@ -41,12 +42,8 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     private val answers = arrayOf(R.string.chapter1_quiz_1_a, R.string.chapter1_quiz_2_c, R.string.chapter1_quiz_3_d,
             R.string.chapter1_quiz_4_b, R.string.chapter1_quiz_5_d)
 
-    private lateinit var viewPager: ViewPager
-    private lateinit var pagerAdapter: PagerAdapter
     private lateinit var pepeHelper: PepeTeachesKotlinHelper
 
-    private lateinit var prevButton: ImageButton
-    private lateinit var nextButton: ImageButton
     private lateinit var doneButton: ImageButton
     private lateinit var konfetti: KonfettiView
 
@@ -61,9 +58,13 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
         doneButton = findViewById<ImageButton>(R.id.butt_done)
         question = findViewById<TextView>(R.id.question)
         optionA = findViewById<Button>(R.id.butt_a)
+        optionA.setOnClickListener(this)
         optionB = findViewById<Button>(R.id.butt_b)
+        optionB.setOnClickListener(this)
         optionC = findViewById<Button>(R.id.butt_c)
+        optionC.setOnClickListener(this)
         optionD = findViewById<Button>(R.id.butt_d)
+        optionD.setOnClickListener(this)
 
         konfetti = findViewById<KonfettiView>(R.id.konfettiView)
 
@@ -71,7 +72,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        setUpQuestion(0)
+        setUpQuestion(currentQuestion)
 
     }
 
@@ -80,24 +81,32 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
             R.id.butt_a ->
                 if (optionA.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    currentQuestion++
+                    setUpQuestion(currentQuestion)
                 } else {
                     optionA.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_b ->
                 if (optionB.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    currentQuestion++
+                    setUpQuestion(currentQuestion)
                 } else {
                     optionB.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_c ->
                 if (optionC.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    currentQuestion++
+                    setUpQuestion(currentQuestion)
                 } else {
-                    optionB.setBackgroundColor(getResources().getColor(R.color.red))
+                    optionC.setBackgroundColor(getResources().getColor(R.color.red))
                 }
             R.id.butt_d ->
                 if (optionD.text.equals(answer)) {
                     Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                    currentQuestion++
+                    setUpQuestion(currentQuestion)
                 } else {
                     optionD.setBackgroundColor(getResources().getColor(R.color.red))
                 }
