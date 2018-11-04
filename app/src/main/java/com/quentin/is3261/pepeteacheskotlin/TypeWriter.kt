@@ -10,36 +10,39 @@ import android.widget.TextView
 import android.widget.Toast
 import cn.dreamtobe.messagehandler.MessageHandler
 
-class TypeWriter(context: Context, attrs: AttributeSet?) : AppCompatTextView(context, attrs) {
+class TypeWriter : AppCompatTextView {
 
-    private var textList: List<String> = emptyList()
-    private var currentIndex: Int = 0
-    private var delay: Long = 150 // in ms
-    private val textHandler = Handler()
-    private var listener: (() -> Unit)? = null
+    private var mText: CharSequence? = null
+    private var mIndex: Int = 0
+    private var mDelay: Long = 150 // in ms
 
-    private val characterAdder: Runnable = object : Runnable {
+    private val mHandler = Handler()
+
+    private val characterAdder = object : Runnable {
+
         override fun run() {
-            text = textList.subList(0, currentIndex).joinToString(" ")
-            if (currentIndex < textList.size) {
-                currentIndex++
-                handler.postDelayed(this, delay)
-            } else {
-                listener?.invoke()
+            text = mText!!.subSequence(0, mIndex++)
+
+            if (mIndex <= mText!!.length) {
+                mHandler.postDelayed(this, mDelay)
             }
         }
     }
 
-    fun animateText(txt: CharSequence, endAnimationListener: (() -> Unit)? = null) {
-        textList = txt.split(Regex("\\s+"))
-        currentIndex = 0
-        listener = endAnimationListener
+    constructor(context: Context) : super(context) {}
 
-        textHandler.removeCallbacks(characterAdder)
-        textHandler.postDelayed(characterAdder, delay)
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
+
+    fun animateText(txt: CharSequence) {
+        mText = txt
+        mIndex = 0
+
+        text = ""
+        mHandler.removeCallbacks(characterAdder)
+        mHandler.postDelayed(characterAdder, mDelay)
     }
 
     fun setCharacterDelay(m: Long) {
-        delay = m
+        mDelay = m
     }
 }

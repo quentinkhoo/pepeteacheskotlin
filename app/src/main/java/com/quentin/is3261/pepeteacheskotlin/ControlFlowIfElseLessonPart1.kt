@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_control_flow_if_else_lesson_part1.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,7 +27,13 @@ class ControlFlowIfElseLessonPart1 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_control_flow_if_else_lesson_part1, container, false)
+        val view = inflater.inflate(R.layout.fragment_control_flow_if_else_lesson_part1, container, false)
+
+        view.ifelse_lesson_intro.setText("")
+        view.ifelse_lesson_intro.setCharacterDelay(50)
+        view.ifelse_lesson_intro.animateText(getString(R.string.chapter2_lesson_ifelse_part1))
+
+        return view
     }
 
 
