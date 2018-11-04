@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicTypesNumbersLessonPart0">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+        android:id="@+id/basictypes_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:text="@string/chapter1_lesson_numbers_part0" />
+
+</FrameLayout>

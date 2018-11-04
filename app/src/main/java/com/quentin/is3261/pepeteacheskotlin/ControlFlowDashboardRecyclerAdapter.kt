@@ -13,19 +13,16 @@ import android.widget.TextView
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 
-class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<DashboardRecyclerAdapter.ViewHolder>() {
+class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<ControlFlowDashboardRecyclerAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 1
+        val REQUEST_CODE = 998
     }
 
-    private val itemImages = intArrayOf(R.drawable.number, R.drawable.alphabet, R.drawable.venn_diagram,
-            R.drawable.chat, R.drawable.array_edited, R.drawable.collections, R.drawable.range,
-            R.drawable.quiz_icon)
+    private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.when_statement, R.drawable.for_loop,
+            R.drawable.while_loop, R.drawable.return_icon, R.drawable.break_and_continue)
 
-    private val itemTitles = arrayOf("Numbers", "Characters", "Boolean", "String", "Arrays", "Collections",
-            "Loop", "Quiz")
-
+    private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return", "Break & Continue")
 
     lateinit var sharedPreferences: SharedPreferences
 
@@ -36,18 +33,14 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
 
     override fun getItemCount(): Int {
         return itemTitles.size
-     }
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemImage.setImageResource(itemImages.get(position))
         holder.itemTitle.text = itemTitles.get(position)
-
     }
 
-
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var currentItem: Int = 0
         var itemImage: ImageView
         var itemTitle: TextView
 
@@ -61,22 +54,13 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                     val position = getAdapterPosition()
                     when (position) {
                         0 -> {
-                            myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
+                            myIntent = Intent(context, ControlFlowIfElseLessonActivity::class.java)
                             //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, ControlFlowDashboardRecyclerAdapter.REQUEST_CODE)
                         }
                         1 -> {
-                            myIntent = Intent(context, BasicTypesCharactersLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
-                        }
-                        2 -> {
-                            myIntent = Intent(context, BasicTypeBooleanLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
-
-                        }
-                        7 -> {
-                            myIntent = Intent(context, BasicTypesQuizActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            myIntent = Intent(context, ControlFlowWhenLessonActivity::class.java)
+                            (context as Activity).startActivity(myIntent)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }

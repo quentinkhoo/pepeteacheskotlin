@@ -4,21 +4,21 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-class BasicTypeNumbersLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {
+class ControlFlowWhenLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {
     override fun getCount(): Int {
         return 4
     }
 
     override fun getItem(position: Int): Fragment? {
         return when (position) {
-            0 -> BasicTypesNumbersLessonPart0.newInstance()
-            1 -> BasicTypesNumbersLessonPart1.newInstance()
-            2 -> BasicTypesNumbersLessonPart2.newInstance()
-            3 -> BasicTypesNumbersLessonPart3.newInstance()
+            0 -> ControlFlowWhenLessonPart1.newInstance()
+            1 -> ControlFlowWhenLessonPart2.newInstance()
+            2 -> ControlFlowWhenLessonPart3.newInstance()
+            3 -> ControlFlowWhenLessonPart4.newInstance()
 
             else ->
                 null
         }
     }
-
 }
+

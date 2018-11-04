@@ -3,6 +3,7 @@
     package="com.quentin.is3261.pepeteacheskotlin">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera.ar"
@@ -34,6 +35,10 @@
         <activity android:name=".BasicTypesCharactersLessonActivity" />
         <activity android:name=".BasicTypesQuizActivity" />
         <activity android:name=".BasicTypeBooleanLessonActivity"></activity>
+        <activity android:name=".TryKotlinActivity" />
+        <activity android:name=".ControlFlowActivity" />
+        <activity android:name=".ControlFlowIfElseLessonActivity" />
+        <activity android:name=".ControlFlowWhenLessonActivity"></activity>
     </application>
 
 </manifest>
