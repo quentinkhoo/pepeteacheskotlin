@@ -76,4 +76,19 @@
         as a result. The example also contains another line of code, which depicts
         how to use \"If\" statement as an expression.</string>
 
+    <string name="chapter2_lesson_when">When Statement</string>
+    <string name="chapter2_lesson_when_part1">If you are familiar with other programming languages,
+        then you might have heard of the term switch statement, which is basically a conditional
+        operator when multiple conditions can be applied on a particular variable. \"when\" operator
+        matches the variable value against the branch conditions. If it is satisfying the branch
+        condition then it will execute the statement inside that scope. In the following example,
+        we will learn more about \"when\" in Kotlin.</string>
+    <string name="chapter2_lesson_when_part2">The above piece of code yields the following output</string>
+    <string name="chapter2_lesson_when_part3">In the above example, Kotlin compiler matches the value
+        of x with the given branches. If it is not matching any of the branches, then it will execute
+        the else part. Practically, when is equivalent to multiple if blocks. Kotlin provides another
+        flexibility to the developer, where the developer can provide multiple checks in the same line
+        by providing \",\" inside the checks as follows.</string>
+    <string name="chapter2_lesson_when_part4">Running the above piece of code would yield the following output</string>
+
 </resources>
