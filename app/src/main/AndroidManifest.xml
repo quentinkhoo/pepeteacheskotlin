@@ -34,11 +34,13 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".BasicTypesCharactersLessonActivity" />
         <activity android:name=".BasicTypesQuizActivity" />
-        <activity android:name=".BasicTypeBooleanLessonActivity"></activity>
+        <activity android:name=".BasicTypeBooleanLessonActivity" />
         <activity android:name=".TryKotlinActivity" />
         <activity android:name=".ControlFlowActivity" />
         <activity android:name=".ControlFlowIfElseLessonActivity" />
-        <activity android:name=".ControlFlowWhenLessonActivity"></activity>
+        <activity android:name=".ControlFlowWhenLessonActivity" />
+        <activity android:name=".BasicTypesStringLessonActivity" />
+        <activity android:name=".BasicTypesArraysLessonActivity"></activity>
     </application>
 
 </manifest>

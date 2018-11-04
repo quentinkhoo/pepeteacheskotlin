@@ -12,7 +12,7 @@ import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
 
-class BasicTypeBooleanLessonActivity : AppCompatActivity() {
+class BasicTypesArraysLessonActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager
     private lateinit var pagerAdapter: PagerAdapter
@@ -25,10 +25,10 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_basic_type_boolean_lesson)
+        setContentView(R.layout.activity_basic_types_arrays_lesson)
 
-        viewPager = findViewById(R.id.boolean_viewpager)
-        pagerAdapter = BasicTypeBooleanLessonPagerAdapter(supportFragmentManager)
+        viewPager = findViewById(R.id.arrays_viewpager)
+        pagerAdapter = BasicTypesArraysLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
         pepeHelper = PepeTeachesKotlinHelper()
 
@@ -39,20 +39,6 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//
-//        viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
-//            override fun onPageScrollStateChanged(state: Int) {
-//
-//            }
-//
-//            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-//
-//            }
-//
-//            override fun onPageSelected(position: Int) {
-//
-//            }
-//        })
 
         doneButton.setOnClickListener {
             finishCharacterLesson()

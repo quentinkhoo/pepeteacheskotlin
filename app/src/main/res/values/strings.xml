@@ -65,10 +65,21 @@
         A character should be declared in a single quote like \'c\'.</string>
     <string name="chapter1_lesson_characters_part2">When you run the piece of code as shown previously,
         it will generate the following output.</string>
-    <string name="chapter1_lesson_boolean_part1" >Boolean is very simple like other programming languages.
+    <string name="chapter1_lesson_boolean_part1">Boolean is very simple like other programming languages.
     We have only two values for Boolean - either true or false. In the following example, we will save how
     Kotlin interprets Boolean.</string>
     <string name="chapter1_lesson_boolean_part2"> The above piece of code will yield the following output in the browser. </string>
+    <string name="chapter1_lesson_string_part1">Strings are character arrays. Like Java, they are immutable in nature.
+        We have two kinds of string available in Kotlin - one is called <b>raw String</b> and another is called <b>escaped String</b>.
+        In the following example, we will make use of these strings.</string>
+    <string name="chapter1_lesson_string_part2">The above example of escaped String allows to provide extra line space after the first print statement.
+        Following will be the output in the browser.</string>
+    <string name="chapter1_lesson_arrays_part1">Arrays are a collection of homogeneous data. Like Java, Kotlin supports arrays of different data types.
+        In the following example, we will make use of different arrays.</string>
+    <string name="chapter1_lesson_arrays_part2">The above piece of code yields the following output. The indexing of the array is similar to other programming languages.
+        Here, we are searching for a second index, whose value is “3”.</string>
+
+
 
     <string name="chapter2_lesson_ifelse">If-Else</string>
     <string name="chapter2_lesson_ifelse_part1">In the previous chapter we have learned about
