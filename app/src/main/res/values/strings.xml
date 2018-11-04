@@ -106,4 +106,16 @@
     <string name="chapter2_lesson_forloop_part4">Once we compile and execute the above piece of code,
         it will yield the following output.</string>
 
+    <string name="chapter2_lesson_whileloop">While Loop and Do-While Loop</string>
+    <string name="chapter2_lesson_whileloop_part1">While and Do-While loops work in a similar way
+        like they do in other programming languages. The following example shows the usage of
+        the <b>While loop</b>.</string>
+    <string name="chapter2_lesson_whileloop_part2">The previous piece of code yields the following output</string>
+    <string name="chapter2_lesson_whileloop_part3">Kotlin also has another loop called the Do-While loop,
+        where the loop body will be executed once, and only then will the condition be checked.
+        The following example shows the usage of the Do-while loop.</string>
+    <string name="chapter2_lesson_whileloop_part4">The previous piece of code yields the following output.
+        In the above code, the Kotlin compiler will execute the <b>DO</b> block, followed by condition
+        checking in the while block.</string>
+
 </resources>

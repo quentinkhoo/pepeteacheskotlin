@@ -34,12 +34,14 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".BasicTypesCharactersLessonActivity" />
         <activity android:name=".BasicTypesQuizActivity" />
-        <activity android:name=".TryKotlinActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".TryKotlinActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".ControlFlowActivity" />
         <activity android:name=".ControlFlowIfElseLessonActivity" />
         <activity android:name=".ControlFlowWhenLessonActivity" />
-        <activity android:name=".ControlFlowForLoopLessonActivity"></activity>
+        <activity android:name=".ControlFlowForLoopLessonActivity" />
+        <activity android:name=".ControlFlowWhileLoopLessonActivity"></activity>
     </application>
 
 </manifest>
