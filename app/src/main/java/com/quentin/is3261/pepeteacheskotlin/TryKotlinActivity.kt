@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_try_kotlin.*
 
 class TryKotlinActivity : AppCompatActivity() {
 
-    private val url = "https://try.kotlinlang.org"
+    private val url = "https://www.tutorialspoint.com/compile_kotlin_online.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
