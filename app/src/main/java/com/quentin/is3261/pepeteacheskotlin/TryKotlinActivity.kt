@@ -12,14 +12,21 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_try_kotlin.*
+import kotlinx.android.synthetic.main.activity_try_kotlin.webview
 
 class TryKotlinActivity : AppCompatActivity() {
 
-    private val url = "https://www.tutorialspoint.com/compile_kotlin_online.php"
+    private var url = "https://www.tutorialspoint.com/compile_kotlin_online.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_try_kotlin)
+
+        val tryOutUrl = intent.getStringExtra("KotlinUrl")
+
+        if (tryOutUrl != null) {
+            url = tryOutUrl
+        }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
