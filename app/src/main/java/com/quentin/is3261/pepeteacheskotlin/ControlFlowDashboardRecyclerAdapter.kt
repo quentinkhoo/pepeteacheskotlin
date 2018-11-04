@@ -56,10 +56,14 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                         0 -> {
                             myIntent = Intent(context, ControlFlowIfElseLessonActivity::class.java)
                             //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, ControlFlowDashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
                         }
                         1 -> {
                             myIntent = Intent(context, ControlFlowWhenLessonActivity::class.java)
+                            (context as Activity).startActivity(myIntent)
+                        }
+                        2 -> {
+                            myIntent = Intent(context, ControlFlowForLoopLessonActivity::class.java)
                             (context as Activity).startActivity(myIntent)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()

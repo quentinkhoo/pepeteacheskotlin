@@ -37,7 +37,8 @@
         <activity android:name=".TryKotlinActivity" />
         <activity android:name=".ControlFlowActivity" />
         <activity android:name=".ControlFlowIfElseLessonActivity" />
-        <activity android:name=".ControlFlowWhenLessonActivity"></activity>
+        <activity android:name=".ControlFlowWhenLessonActivity" />
+        <activity android:name=".ControlFlowForLoopLessonActivity"></activity>
     </application>
 
 </manifest>
