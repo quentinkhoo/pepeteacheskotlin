@@ -84,7 +84,7 @@
         condition then it will execute the statement inside that scope. In the following example,
         we will learn more about \"when\" in Kotlin.</string>
     <string name="chapter2_lesson_when_part2">The above piece of code yields the following output</string>
-    <string name="chapter2_lesson_when_part3">In the above example, Kotlin compiler matches the value
+    <string name="chapter2_lesson_when_part3">In the previous example, the Kotlin compiler matches the value
         of x with the given branches. If it is not matching any of the branches, then it will execute
         the else part. Practically, when is equivalent to multiple if blocks. Kotlin provides another
         flexibility to the developer, where the developer can provide multiple checks in the same line
