@@ -13,8 +13,7 @@
         android:id="@+id/characterLesson1Text"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textSize="12sp"
+        android:layout_weight="2"
         android:textColor="#fdfcfc"
         android:text="@string/chapter1_lesson_characters_part1" />
 
@@ -22,15 +21,15 @@
         android:id="@+id/characterLesson1Image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:scaleType="fitXY"
+        android:layout_weight="3"
+        android:scaleType="fitStart"
         android:src="@drawable/characters_lesson1" />
 
     <TextView
         android:id="@+id/characterLesson2Text"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:textSize="12sp"
         android:textColor="#fdfcfc"
         android:text="@string/chapter1_lesson_characters_part2" />
@@ -40,6 +39,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scaleType="fitXY"
+        android:scaleType="fitStart"
         android:src="@drawable/characters_lesson2" />
 </LinearLayout>
