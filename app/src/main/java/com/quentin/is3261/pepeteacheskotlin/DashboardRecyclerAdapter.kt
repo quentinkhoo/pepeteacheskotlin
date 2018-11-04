@@ -70,7 +70,7 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
                         }
                         2 -> {
-                            myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
+                            myIntent = Intent(context, BasicTypeBooleanLessonActivity::class.java)
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
 
                         }

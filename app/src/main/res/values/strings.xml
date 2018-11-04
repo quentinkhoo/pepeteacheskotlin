@@ -63,5 +63,9 @@
         A character should be declared in a single quote like \'c\'.</string>
     <string name="chapter1_lesson_characters_part2">When you run the piece of code as shown previously,
         it will generate the following output.</string>
+    <string name="chapter1_lesson_boolean_part1" >Boolean is very simple like other programming languages.
+    We have only two values for Boolean - either true or false. In the following example, we will save how
+    Kotlin interprets Boolean.</string>
+    <string name="chapter1_lesson_boolean_part2"> The above piece of code will yield the following output in the browser. </string>
 
 </resources>
