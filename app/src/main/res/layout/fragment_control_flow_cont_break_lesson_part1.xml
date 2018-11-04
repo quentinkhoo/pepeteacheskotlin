@@ -29,8 +29,9 @@
         android:id="@+id/contBreakLessonImage1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:clickable="true"
         android:focusable="true"
+        android:scaleType="fitStart"
         android:src="@drawable/contbreak_lesson1" />
 </LinearLayout>
