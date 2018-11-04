@@ -125,4 +125,12 @@
         function and multiplying the input with 2, and returning the resultant value to the called 
         function that is our main function.</string>
 
+    <string name="chapter2_lesson_contbreak">Continue &amp; Break</string>
+    <string name="chapter2_lesson_contbreak_part1">Continue and break are the most vital part of a
+        logical problem. The \"break\" keyword terminates the controller flow if some condition has
+        failed and \"continue\" does the opposite. Labels can also be applied as shown in the example below.</string>
+    <string name="chapter2_lesson_contbreak_part2">The previous piece of code yields the following output</string>
+    <string name="chapter2_lesson_contbreak_part3">As you can see, the controller continues the loop,
+        until the value of x is 5. Once the value of x reaches 5, it starts executing the if block
+        and once the break statement is reached, the entire control flow terminates the program execution.</string>
 </resources>
