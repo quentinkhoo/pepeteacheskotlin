@@ -19,8 +19,8 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
         val REQUEST_CODE = 998
     }
 
-    private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.`when`, R.drawable.for_loop,
-            R.drawable.while_loop, R.drawable.`return`, R.drawable.break_and_continue)
+    private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.when_statement, R.drawable.for_loop,
+            R.drawable.while_loop, R.drawable.return_icon, R.drawable.break_and_continue)
 
     private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return", "Break & Continue")
 

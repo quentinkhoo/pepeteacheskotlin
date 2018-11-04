@@ -35,7 +35,8 @@
         <activity android:name=".BasicTypesCharactersLessonActivity" />
         <activity android:name=".BasicTypesQuizActivity" />
         <activity android:name=".TryKotlinActivity" />
-        <activity android:name=".ControlFlowActivity"></activity>
+        <activity android:name=".ControlFlowActivity" />
+        <activity android:name=".ControlFlowIfElseLessonActivity"></activity>
     </application>
 
 </manifest>

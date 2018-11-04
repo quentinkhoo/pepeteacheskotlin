@@ -64,4 +64,16 @@
     <string name="chapter1_lesson_characters_part2">When you run the piece of code as shown previously,
         it will generate the following output.</string>
 
+    <string name="chapter2_lesson_ifelse">If-Else</string>
+    <string name="chapter2_lesson_ifelse_part1">In the previous chapter we have learned about
+        different types of data types available in Kotlin system. In this chapter, we will discuss
+        different types of control flow mechanism available in the Kotlin.</string>
+    <string name="chapter2_lesson_ifelse_part2">Kotlin is a functional language hence like every
+        functional language in Kotlin “if” is an expression and not a keyword. The expression \"if\"
+        will return a value whenever necessary. Like other programming language. In the following
+        example, we will compare two variables and provide the required output accordingly.</string>
+    <string name="chapter2_lesson_ifelse_part3">The previous piece of code yields the following output
+        as a result. The example also contains another line of code, which depicts
+        how to use \"If\" statement as an expression.</string>
+
 </resources>
