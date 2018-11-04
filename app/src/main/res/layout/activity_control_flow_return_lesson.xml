@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlFlowReturnLessonActivity">
+
+    <ImageView
+        android:id="@+id/pepebackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/pepe_teaching_background"
+        android:scaleType="fitXY"/>
+
+    <!--
+    <FrameLayout
+        android:id="@+id/number_fragment"
+        android:layout_width="349dp"
+        android:layout_height="204dp"
+        android:layout_centerInParent="false"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp">
+
+    </FrameLayout>
+    -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/return_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="248dp"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="40dp" />
+
+    <ImageButton
+        android:id="@+id/butt_previous"
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pepe_previous_button" />
+
+    <ImageButton
+        android:id="@+id/butt_next"
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pepe_next_button" />
+
+    <ImageButton
+        android:id="@+id/butt_done"
+        android:layout_width="80dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:clickable="false"
+        app:srcCompat="@drawable/pepe_done_button" />
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

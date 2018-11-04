@@ -118,4 +118,11 @@
         In the above code, the Kotlin compiler will execute the <b>DO</b> block, followed by condition
         checking in the while block.</string>
 
+    <string name="chapter2_lesson_return">Return</string>
+    <string name="chapter2_lesson_return_part1">Return is a keyword that returns some value to the
+        calling function from the called function.</string>
+    <string name="chapter2_lesson_return_part2">In the above piece of code, we are calling another 
+        function and multiplying the input with 2, and returning the resultant value to the called 
+        function that is our main function.</string>
+
 </resources>

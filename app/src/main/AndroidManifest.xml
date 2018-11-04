@@ -41,7 +41,8 @@
         <activity android:name=".ControlFlowIfElseLessonActivity" />
         <activity android:name=".ControlFlowWhenLessonActivity" />
         <activity android:name=".ControlFlowForLoopLessonActivity" />
-        <activity android:name=".ControlFlowWhileLoopLessonActivity"></activity>
+        <activity android:name=".ControlFlowWhileLoopLessonActivity" />
+        <activity android:name=".ControlFlowReturnLessonActivity"></activity>
     </application>
 
 </manifest>
