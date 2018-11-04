@@ -34,11 +34,9 @@ class ControlFlowForLoopLessonPart2 : Fragment() {
         val myView = inflater.inflate(R.layout.fragment_control_flow_for_loop_lesson_part2, container, false)
 
         myView.forloopLesson1Image.setOnClickListener {
-            myView.forloopLesson1Image.setOnClickListener {
-                val urlIntent = Intent(context, TryKotlinActivity::class.java)
-                urlIntent.putExtra("KotlinUrl", url)
-                startActivity(urlIntent)
-            }
+            val urlIntent = Intent(context, TryKotlinActivity::class.java)
+            urlIntent.putExtra("KotlinUrl", url)
+            startActivity(urlIntent)
         }
 
         return myView
