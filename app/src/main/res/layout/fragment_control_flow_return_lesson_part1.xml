@@ -40,7 +40,7 @@
         android:id="@+id/textView18"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:textColor="@color/white"
         android:text="@string/chapter2_lesson_return_part2" />
 
