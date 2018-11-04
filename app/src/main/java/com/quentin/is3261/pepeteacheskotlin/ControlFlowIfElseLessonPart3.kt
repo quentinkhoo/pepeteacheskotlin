@@ -19,6 +19,10 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowIfElseLessonPart3 : Fragment() {
 
+    companion object {
+        fun newInstance() = ControlFlowIfElseLessonPart3()
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment

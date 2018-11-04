@@ -54,17 +54,9 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                     val position = getAdapterPosition()
                     when (position) {
                         0 -> {
-                            myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
+                            myIntent = Intent(context, ControlFlowIfElseLessonActivity::class.java)
                             //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
-                        }
-                        1 -> {
-                            myIntent = Intent(context, BasicTypesCharactersLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
-                        }
-                        2 -> {
-                            myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, ControlFlowDashboardRecyclerAdapter.REQUEST_CODE)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }
