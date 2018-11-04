@@ -12,8 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textSize="12sp"
-        android:background="@null"
         android:textColor="#fdfcfc"
         android:text="@string/chapter1_lesson_numbers_part2_1" />
 
@@ -23,7 +21,6 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:background="@null"
-        android:scaleType="fitXY"
         android:src="@drawable/numbers_lesson1" />
 
 </LinearLayout>

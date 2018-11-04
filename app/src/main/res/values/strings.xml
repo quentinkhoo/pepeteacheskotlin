@@ -50,6 +50,8 @@
     <string name="chapter1_quiz_5_d">val l: Long = "42".toLong()</string> <!--Answer -->
 
     <string name="chapter1_lesson_numbers">Numbers</string>
+    <string name="chapter1_lesson_numbers_part0">In this chapter, we will learn about the basic data
+        types available in Kotlin programming language.</string>
     <string name="chapter1_lesson_numbers_part1">The representation of numbers in Kotlin is pretty similar to Java,
          however, Kotlin does not allow internal conversion of different data types.
         The following table lists different variable lengths for different numbers.</string>

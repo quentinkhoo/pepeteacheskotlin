@@ -29,7 +29,7 @@ class ControlFlowWhenLessonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_control_flow_when_lesson)
 
-        viewPager = findViewById(R.id.ifelse_viewpager)
+        viewPager = findViewById(R.id.when_viewpager)
         pagerAdapter = ControlFlowWhenLessonPagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
         pepeHelper = PepeTeachesKotlinHelper()
@@ -68,7 +68,7 @@ class ControlFlowWhenLessonActivity : AppCompatActivity() {
         }
 
         doneButton.setOnClickListener {
-            finishIfElseLesson()
+            finishWhenLesson()
         }
 
     }
@@ -82,9 +82,9 @@ class ControlFlowWhenLessonActivity : AppCompatActivity() {
         }
     }
 
-    private fun finishIfElseLesson() {
-        sharedPreferences.set("IfElseLesson", true)
-        Toast.makeText(this, "You have finished If-Else Lesson!", Toast.LENGTH_LONG).show()
+    private fun finishWhenLesson() {
+        sharedPreferences.set("WhenLesson", true)
+        Toast.makeText(this, "You have finished When Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
     }
 
