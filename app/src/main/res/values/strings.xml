@@ -93,4 +93,18 @@
         by providing \",\" inside the checks as follows.</string>
     <string name="chapter2_lesson_when_part4">Running the above piece of code would yield the following output</string>
 
+    <string name="chapter2_lesson_forloop">For Loop</string>
+    <string name="chapter2_lesson_forloop_part1">Loop is a statement that provides the flexibility
+        to iterate through any kind of data structure. Like other programming languages, Kotlin also
+        provides many kinds of Looping methodology, however, among them \"<b>For</b>b\" is the most
+        common one. The implementation and use of For loop is conceptually similar to Java for loop.
+        The following example shows how for loops can be used.</string>
+    <string name="chapter2_lesson_forloop_part2">In the above piece of code, we have declared a list
+        called "items" and using the for loop we are iterating through that defined list and printing
+        its value with the output as shown below.</string>
+    <string name="chapter2_lesson_forloop_part3">The following is another example of a code, in which we
+        are using some library function to make our development work easier than ever before.</string>
+    <string name="chapter2_lesson_forloop_part4">Once we compile and execute the above piece of code,
+        it will yield the following output.</string>
+
 </resources>
