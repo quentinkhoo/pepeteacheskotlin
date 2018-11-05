@@ -48,6 +48,7 @@
         <activity android:name=".BasicTypesStringLessonActivity" />
         <activity android:name=".BasicTypesArraysLessonActivity" />
         <activity android:name=".BasicTypesCollectionsLessonActivity" />
+        <activity android:name=".BasicTypesRangesLessonActivity"></activity>
         <activity android:name=".ControlFlowQuizActivity"></activity>
     </application>
 

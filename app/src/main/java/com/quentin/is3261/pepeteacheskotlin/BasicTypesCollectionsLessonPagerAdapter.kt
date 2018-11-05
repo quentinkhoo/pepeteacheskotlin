@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-class BasicTypesCollectionsLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {
+class BasicTypesCollectionsLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager){
 
     override fun getCount(): Int {
         return 5
