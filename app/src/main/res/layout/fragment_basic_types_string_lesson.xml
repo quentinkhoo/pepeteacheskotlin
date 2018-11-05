@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BasicTypesStringLessonFragment">
+
+    <TextView
+        android:id="@+id/stringLesson1Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:textSize="12sp"
+        android:textColor="#fdfcfc"
+        android:text="@string/chapter1_lesson_string_part1" />
+
+    <ImageView
+        android:id="@+id/stringLesson1Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:scaleType="fitXY"
+        android:src="@drawable/string_lesson1" />
+
+    <TextView
+        android:id="@+id/stringLesson2Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/chapter1_lesson_string_part2"
+        android:textColor="#fdfcfc"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/stringLesson2Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitStart"
+        android:src="@drawable/string_lesson2" />
+
+</LinearLayout>

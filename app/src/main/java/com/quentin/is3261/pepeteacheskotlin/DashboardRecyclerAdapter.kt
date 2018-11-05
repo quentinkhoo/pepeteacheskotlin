@@ -24,7 +24,7 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
             R.drawable.quiz_icon)
 
     private val itemTitles = arrayOf("Numbers", "Characters", "Boolean", "String", "Arrays", "Collections",
-            "Loop", "Quiz")
+            "Ranges", "Quiz")
 
 
     lateinit var sharedPreferences: SharedPreferences
@@ -70,7 +70,17 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
                         }
                         2 -> {
-                            myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
+                            myIntent = Intent(context, BasicTypeBooleanLessonActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+
+                        }
+                        3 -> {
+                            myIntent = Intent(context, BasicTypesStringLessonActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+
+                        }
+                        4 -> {
+                            myIntent = Intent(context, BasicTypesArraysLessonActivity::class.java)
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
 
                         }
