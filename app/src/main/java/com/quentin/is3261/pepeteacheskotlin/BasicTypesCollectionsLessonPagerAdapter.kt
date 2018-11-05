@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 class BasicTypesCollectionsLessonPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {
 
     override fun getCount(): Int {
-        return 4
+        return 5
     }
 
     override fun getItem(position: Int): Fragment? {
@@ -16,6 +16,7 @@ class BasicTypesCollectionsLessonPagerAdapter(fragmentManager: FragmentManager):
             1 -> BasicTypesCollectionsLessonPart2.newInstance()
             2 -> BasicTypesCollectionsLessonPart3.newInstance()
             3 -> BasicTypesCollectionsLessonPart4.newInstance()
+            4 -> BasicTypesCollectionsLessonPart5.newInstance()
 
             else ->
                 null
