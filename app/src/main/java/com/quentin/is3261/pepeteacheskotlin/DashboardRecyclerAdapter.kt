@@ -89,6 +89,11 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
 
                         }
+                        6 -> {
+                            myIntent = Intent(context, BasicTypesRangesLessonActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+
+                        }
                         7 -> {
                             myIntent = Intent(context, BasicTypesQuizActivity::class.java)
                             (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)

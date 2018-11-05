@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BasicTypesRangesLessonPart2">
+
+    <TextView
+    android:id="@+id/rangesLesson1Text2"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.5"
+    android:textColor="#fdfcfc"
+    android:text="@string/chapter1_lesson_ranges_part2" />
+
+    <ImageView
+        android:id="@+id/rangesLessonImage1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ranges_lesson1" />
+
+    <TextView
+        android:id="@+id/rangesLesson1Text3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:textColor="#fdfcfc"
+        android:text="@string/chapter1_lesson_ranges_part3" />
+
+    <ImageView
+        android:id="@+id/rangesLessonImage2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitStart"
+        android:src="@drawable/ranges_lesson2" />
+</LinearLayout>

@@ -47,7 +47,8 @@
         <activity android:name=".ControlFlowContBreakLessonActivity" />
         <activity android:name=".BasicTypesStringLessonActivity" />
         <activity android:name=".BasicTypesArraysLessonActivity" />
-        <activity android:name=".BasicTypesCollectionsLessonActivity"></activity>
+        <activity android:name=".BasicTypesCollectionsLessonActivity" />
+        <activity android:name=".BasicTypesRangesLessonActivity"></activity>
     </application>
 
 </manifest>

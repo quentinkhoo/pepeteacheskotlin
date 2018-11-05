@@ -155,4 +155,11 @@
         You are free to implement any collection of your choice such as Map and Set.</string>
     <string name="chapter1_lesson_collections_part4">In the following example, we have implemented Map and Set using different built-in methods.</string>
     <string name="chapter1_lesson_collections_part5">The above piece of code yields the following output in the browser.</string>
+
+
+    <string name="chapter1_lesson_ranges_part1">Ranges is another unique characteristic of Kotlin. Like Haskell,
+        it provides an operator that helps you iterate through a range. Internally, it is implemented using <b>rangeTo()</b> and its operator form is <b>(..)</b>.</string>
+    <string name="chapter1_lesson_ranges_part2">In the following example, we will see how Kotlin interprets this range operator.</string>
+    <string name="chapter1_lesson_ranges_part3">The above piece of code yields the following output in the browser.</string>
+
 </resources>
