@@ -85,7 +85,7 @@
     <string name="chapter2_quiz_1_c">val x = if (a) b else c</string> <!-- Answer-->
     <string name="chapter2_quiz_1_d">None of the above</string>
 
-    <string name="chapter2_quiz_2">What is the equivalent keyword of a <b>when</b>
+    <string name="chapter2_quiz_2">What is the equivalent keyword of a \"when\"
         statement in other programming languages?</string>
     <string name="chapter2_quiz_2_a">if</string>
     <string name="chapter2_quiz_2_b">for</string>
@@ -98,20 +98,16 @@
     <string name="chapter2_quiz_3_c">Object-Oriented</string>
     <string name="chapter2_quiz_3_d">Declarative</string>
 
-    <string name="chapter2_quiz_4">Which of the following statements results in an output \"12345\",
-        given that x is initialized to 0?</string>
+    <string name="chapter2_quiz_4">Given x is 0, which statement results in the output \"12345\",</string>
     <string name="chapter2_quiz_4_a">while(x++!=5) {print(x)}</string> <!-- Answer-->
     <string name="chapter2_quiz_4_b">for(i in 1..5) {print(x)}</string>
     <string name="chapter2_quiz_4_c">do {print(x++) while(x!=5)}</string>
     <string name="chapter2_quiz_4_d">None of the above</string>
 
     <string name="chapter2_quiz_5">Which of the following is true?</string>
-    <string name="chapter2_quiz_5_a">If \"when\" is used as an expression, the \"else\" branch is
-        not mandatory.</string>
-    <string name="chapter2_quiz_5_b">The \"else\"  branch will always be evaluated when the \"when\"
-        expression is used</string>
-    <string name="chapter2_quiz_5_c">In a do-while loop the condition will always be tested at the end
-        of the loop</string>
+    <string name="chapter2_quiz_5_a">\"else\" is optional in \"when\" clause.</string>
+    <string name="chapter2_quiz_5_b">\"continue\" terminates controller flow</string>
+    <string name="chapter2_quiz_5_c">Do-while loop code will run at least once</string> <!--Answer-->
     <string name="chapter2_quiz_5_d">None of the above</string>
 
     <string name="chapter2_lesson_ifelse">If-Else</string>

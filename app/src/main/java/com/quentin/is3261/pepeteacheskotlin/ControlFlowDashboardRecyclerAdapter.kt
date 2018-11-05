@@ -80,7 +80,8 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                             (context as Activity).startActivity(myIntent)
                         }
                         6 -> {
-
+                            myIntent = Intent(context, ControlFlowQuizActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }
