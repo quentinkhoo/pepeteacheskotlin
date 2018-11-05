@@ -20,6 +20,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:scaleType="fitStart"
+        android:clickable="true"
+        android:focusable="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:src="@drawable/collections_lesson" />

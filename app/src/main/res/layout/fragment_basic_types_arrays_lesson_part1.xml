@@ -22,6 +22,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:scaleType="fitXY"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/arrays_lesson1" />
 
     <TextView
