@@ -44,9 +44,10 @@
         <activity android:name=".ControlFlowForLoopLessonActivity" />
         <activity android:name=".ControlFlowWhileLoopLessonActivity" />
         <activity android:name=".ControlFlowReturnLessonActivity" />
-        <activity android:name=".ControlFlowContBreakLessonActivity"></activity>
+        <activity android:name=".ControlFlowContBreakLessonActivity" />
         <activity android:name=".BasicTypesStringLessonActivity" />
-        <activity android:name=".BasicTypesArraysLessonActivity"></activity>
+        <activity android:name=".BasicTypesArraysLessonActivity" />
+        <activity android:name=".BasicTypesCollectionsLessonActivity"></activity>
     </application>
 
 </manifest>
