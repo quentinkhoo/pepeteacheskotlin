@@ -24,7 +24,7 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
             R.drawable.quiz_icon)
 
     private val itemTitles = arrayOf("Numbers", "Characters", "Boolean", "String", "Arrays", "Collections",
-            "Ranges", "Quiz")
+            "Ranges", "Basic Types Quiz")
 
 
     lateinit var sharedPreferences: SharedPreferences
@@ -63,30 +63,30 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                         0 -> {
                             myIntent = Intent(context, BasicTypesNumbersLessonActivity::class.java)
                             //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
                         }
                         1 -> {
                             myIntent = Intent(context, BasicTypesCharactersLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
                         }
                         2 -> {
                             myIntent = Intent(context, BasicTypeBooleanLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
 
                         }
                         3 -> {
                             myIntent = Intent(context, BasicTypesStringLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
 
                         }
                         4 -> {
                             myIntent = Intent(context, BasicTypesArraysLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
 
                         }
                         5 -> {
                             myIntent = Intent(context, BasicTypesCollectionsLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
 
                         }
                         7 -> {
