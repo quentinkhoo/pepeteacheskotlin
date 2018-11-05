@@ -1,6 +1,7 @@
 package com.quentin.is3261.pepeteacheskotlin
 
 import android.graphics.Color
+import android.view.View
 import nl.dionsegijn.konfetti.KonfettiView
 
 class PepeTeachesKotlinHelper {
@@ -17,6 +18,4 @@ class PepeTeachesKotlinHelper {
                 .setPosition(-50f, konfetti.width + 50f, -50f, -50f)
                 .streamFor(300, 5000L)
     }
-
-
 }

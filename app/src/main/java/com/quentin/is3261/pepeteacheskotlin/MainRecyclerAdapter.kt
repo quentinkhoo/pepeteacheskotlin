@@ -17,7 +17,8 @@ import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 999
+        val BASIC_QUIZ_REQUEST_CODE = 999
+        val CONTROL_FLOW_REQUEST_CODE = 998
     }
 
     private val itemImages = intArrayOf(R.drawable.thinking_pepe, R.drawable.party_pepe, R.drawable.pepe_oop,
@@ -88,13 +89,12 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                         }
                         1 -> {
                             myIntent = Intent(context, BasicTypesActivity::class.java)
-                            //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, MainActivity.QUIZ_REQUEST_CODE)
                         }
                         2 -> {
                             if (sharedPreferences.get("BasicQuizComplete")?: false == true) {
                                 myIntent = Intent(context, ControlFlowActivity::class.java)
-                                (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                                (context as Activity).startActivityForResult(myIntent, MainActivity.QUIZ_REQUEST_CODE)
                             } else {
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
                             }
@@ -102,7 +102,7 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                         3 -> {
                             if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true) {
                                 myIntent = Intent(context, Lesson2Activity::class.java)
-                                (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                                (context as Activity).startActivityForResult(myIntent, MainActivity.QUIZ_REQUEST_CODE)
                             } else {
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
                             }

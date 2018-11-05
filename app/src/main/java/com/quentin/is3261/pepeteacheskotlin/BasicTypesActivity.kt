@@ -40,4 +40,12 @@ class BasicTypesActivity : AppCompatActivity() {
             super.onOptionsItemSelected(item)
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE) {
+            finish()
+        }
+    }
+
 }

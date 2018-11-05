@@ -17,9 +17,10 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val PROGRESS_REQUEST_CODE = 1
+    companion object {
+        val QUIZ_REQUEST_CODE = 999
+    }
 
-    private val QUIZ_REQUEST_CODE = 999
 
     lateinit var sharedPreferences: SharedPreferences
     lateinit var recyclerView: RecyclerView
@@ -42,14 +43,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == PROGRESS_REQUEST_CODE) {
-            var progress = 5
-            progressBar.setProgress(progress)
+        if (requestCode == QUIZ_REQUEST_CODE) {
+            adapter.notifyDataSetChanged()
         }
-         if (requestCode == QUIZ_REQUEST_CODE) {
-             finish()
-             val myIntent = Intent(this, MainActivity::class.java)
-             startActivity(myIntent)
-         }
     }
 }

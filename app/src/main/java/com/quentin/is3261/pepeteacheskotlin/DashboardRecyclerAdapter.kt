@@ -16,7 +16,7 @@ import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<DashboardRecyclerAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 1
+        val BASIC_QUIZ_REQUEST_CODE = 9999
     }
 
     private val itemImages = intArrayOf(R.drawable.number, R.drawable.alphabet, R.drawable.venn_diagram,
@@ -91,17 +91,18 @@ class DashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<Dash
                         }
                         6 -> {
                             myIntent = Intent(context, BasicTypesRangesLessonActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivity(myIntent)
 
                         }
                         7 -> {
                             myIntent = Intent(context, BasicTypesQuizActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, BASIC_QUIZ_REQUEST_CODE)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }
 
                 }
+
             })
         }
     }

@@ -178,7 +178,7 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
         sharedPreferences.set("ControlFlowQuizComplete", true)
         Toast.makeText(this, "You have completed Control Flow Quiz!", Toast.LENGTH_LONG).show()
         pepeHelper.throwConfetti(konfetti)
-        finishActivity(998)
+        finish()
     }
 
 }

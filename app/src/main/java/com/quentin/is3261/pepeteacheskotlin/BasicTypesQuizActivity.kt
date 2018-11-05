@@ -3,6 +3,7 @@ package com.quentin.is3261.pepeteacheskotlin
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
@@ -19,6 +20,8 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var optionD: Button
     private lateinit var answer: String
     private var currentQuestion: Int = 0
+
+    private var handler: Handler = Handler()
 
     private val questionBank = arrayOf(R.string.chapter1_quiz_1, R.string.chapter1_quiz_2, R.string.chapter1_quiz_3,
             R.string.chapter1_quiz_4, R.string.chapter1_quiz_5)
@@ -174,9 +177,9 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun finishQuiz() {
         sharedPreferences.set("BasicQuizComplete", true)
-        Toast.makeText(this, "You have completed Control Flow Quiz!", Toast.LENGTH_LONG).show()
-        pepeHelper.throwConfetti(konfetti)
-        finishActivity(998)
+        Toast.makeText(this, "You have completed Basic Types Quiz!", Toast.LENGTH_LONG).show()
+        finishActivity(DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE)
+        finish()
     }
 
 }
