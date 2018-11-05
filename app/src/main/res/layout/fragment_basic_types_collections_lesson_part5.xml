@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BasicTypesCollectionsLessonPart5">
+
+    <TextView
+    android:id="@+id/collectionsLesson5Text"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:textColor="#fdfcfc"
+    android:text="@string/chapter1_lesson_collections_part5" />
+
+    <ImageView
+    android:id="@+id/collectionsLessonImage4"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:scaleType="fitStart"
+    android:src="@drawable/collections_lesson4" />
+
+</LinearLayout>

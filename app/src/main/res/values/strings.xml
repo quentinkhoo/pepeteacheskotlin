@@ -80,7 +80,6 @@
         Here, we are searching for a second index, whose value is “3”.</string>
 
 
-
     <string name="chapter2_lesson_ifelse">If-Else</string>
     <string name="chapter2_lesson_ifelse_part1">In the previous chapter we have learned about
         different types of data types available in Kotlin system. In this chapter, we will discuss
@@ -148,4 +147,12 @@
     <string name="chapter2_lesson_contbreak_part3">As you can see, the controller continues the loop,
         until the value of x is 5. Once the value of x reaches 5, it starts executing the if block
         and once the break statement is reached, the entire control flow terminates the program execution.</string>
+    <string name="chapter1_lesson_collections_part1"> Collection is a very important part of the data structure, which makes the software development easy for engineers.
+        Kotlin has two types of collection - one is immutable collection (which means lists, maps and sets that cannot be editable) and another is mutable collection (this type of collection is editable). It is very important to keep in mind the type of collection used in your application, as Kotlin system does not represent any specific difference in them.</string>
+    <string name="chapter1_lesson_collections_part2">The above piece of code will yield the following output in the browser.
+        It gives an error when we try to clear the mutable list of collection.</string>
+    <string name="chapter1_lesson_collections_part3">In collection, Kotlin provides some useful methods such as first(), last(), filter(), etc. All these methods are self-descriptive and easy to implement. Moreover, Kotlin follows the same structure such as Java while implementing collection.
+        You are free to implement any collection of your choice such as Map and Set.</string>
+    <string name="chapter1_lesson_collections_part4">In the following example, we have implemented Map and Set using different built-in methods.</string>
+    <string name="chapter1_lesson_collections_part5">The above piece of code yields the following output in the browser.</string>
 </resources>
