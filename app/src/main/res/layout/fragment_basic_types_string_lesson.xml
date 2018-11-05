@@ -20,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
+        android:clickable="true"
+        android:focusable="true"
         android:scaleType="fitXY"
         android:src="@drawable/string_lesson1" />
 

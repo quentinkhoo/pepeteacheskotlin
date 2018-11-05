@@ -45,9 +45,9 @@
 
     <string name="chapter1_quiz_5">What is the correct syntax to convert the String \"42\" to Long in Kotlin</string>
     <string name="chapter1_quiz_5_a">val l: Long = Long.parseInt(\"42\")</string>
-    <string name="chapter1_quiz_5_b">val l: Long = (Long)"42"</string>
-    <string name="chapter1_quiz_5_c">val l: Long = &lt;Long&gt;"42"</string>
-    <string name="chapter1_quiz_5_d">val l: Long = "42".toLong()</string> <!--Answer -->
+    <string name="chapter1_quiz_5_b">val l: Long = (Long)\"42\"</string>
+    <string name="chapter1_quiz_5_c">val l: Long = &lt;Long&gt;\"42\"</string>
+    <string name="chapter1_quiz_5_d">val l: Long = \"42\".toLong()</string> <!--Answer -->
 
     <string name="chapter1_lesson_numbers">Numbers</string>
     <string name="chapter1_lesson_numbers_part0">In this chapter, we will learn about the basic data
@@ -79,6 +79,36 @@
     <string name="chapter1_lesson_arrays_part2">The above piece of code yields the following output. The indexing of the array is similar to other programming languages.
         Here, we are searching for a second index, whose value is “3”.</string>
 
+    <string name="chapter2_quiz_1">What is the equivalent of Java\'s \"int x = a ? b :c;\" in Kotlin?</string>
+    <string name="chapter2_quiz_1_a">val x = a ? b : c</string>
+    <string name="chapter2_quiz_1_b">val x = a ?: b, c</string>
+    <string name="chapter2_quiz_1_c">val x = if (a) b else c</string> <!-- Answer-->
+    <string name="chapter2_quiz_1_d">None of the above</string>
+
+    <string name="chapter2_quiz_2">What is the equivalent keyword of a \"when\"
+        statement in other programming languages?</string>
+    <string name="chapter2_quiz_2_a">if</string>
+    <string name="chapter2_quiz_2_b">for</string>
+    <string name="chapter2_quiz_2_c">while</string>
+    <string name="chapter2_quiz_2_d">switch</string> <!-- Answer-->
+
+    <string name="chapter2_quiz_3">What kind of a programming language is kotlin?</string>
+    <string name="chapter2_quiz_3_a">Functional</string> <!-- Answer-->
+    <string name="chapter2_quiz_3_b">Procedural</string>
+    <string name="chapter2_quiz_3_c">Object-Oriented</string>
+    <string name="chapter2_quiz_3_d">Declarative</string>
+
+    <string name="chapter2_quiz_4">Given x is 0, which statement results in the output \"12345\",</string>
+    <string name="chapter2_quiz_4_a">while(x++!=5) {print(x)}</string> <!-- Answer-->
+    <string name="chapter2_quiz_4_b">for(i in 1..5) {print(x)}</string>
+    <string name="chapter2_quiz_4_c">do {print(x++) while(x!=5)}</string>
+    <string name="chapter2_quiz_4_d">None of the above</string>
+
+    <string name="chapter2_quiz_5">Which of the following is true?</string>
+    <string name="chapter2_quiz_5_a">\"else\" is optional in \"when\" clause.</string>
+    <string name="chapter2_quiz_5_b">\"continue\" terminates controller flow</string>
+    <string name="chapter2_quiz_5_c">Do-while loop code will run at least once</string> <!--Answer-->
+    <string name="chapter2_quiz_5_d">None of the above</string>
 
     <string name="chapter2_lesson_ifelse">If-Else</string>
     <string name="chapter2_lesson_ifelse_part1">In the previous chapter we have learned about
@@ -147,6 +177,7 @@
     <string name="chapter2_lesson_contbreak_part3">As you can see, the controller continues the loop,
         until the value of x is 5. Once the value of x reaches 5, it starts executing the if block
         and once the break statement is reached, the entire control flow terminates the program execution.</string>
+
     <string name="chapter1_lesson_collections_part1"> Collection is a very important part of the data structure, which makes the software development easy for engineers.
         Kotlin has two types of collection - one is immutable collection (which means lists, maps and sets that cannot be editable) and another is mutable collection (this type of collection is editable). It is very important to keep in mind the type of collection used in your application, as Kotlin system does not represent any specific difference in them.</string>
     <string name="chapter1_lesson_collections_part2">The above piece of code will yield the following output in the browser.

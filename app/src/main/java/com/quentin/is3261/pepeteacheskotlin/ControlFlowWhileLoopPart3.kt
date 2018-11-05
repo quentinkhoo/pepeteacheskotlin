@@ -41,8 +41,6 @@ class ControlFlowWhileLoopPart3 : Fragment() {
         }
 
         return myView
-
-        return myView
     }
 
 

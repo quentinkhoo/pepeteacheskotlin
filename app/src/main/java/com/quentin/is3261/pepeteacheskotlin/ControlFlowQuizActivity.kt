@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
-import android.widget.Toast
 
-class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
+class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var question: TextView
     private lateinit var optionA: Button
@@ -20,23 +22,23 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var answer: String
     private var currentQuestion: Int = 0
 
-    private val questionBank = arrayOf(R.string.chapter1_quiz_1, R.string.chapter1_quiz_2, R.string.chapter1_quiz_3,
-            R.string.chapter1_quiz_4, R.string.chapter1_quiz_5)
+    private val questionBank = arrayOf(R.string.chapter2_quiz_1, R.string.chapter2_quiz_2, R.string.chapter2_quiz_3,
+            R.string.chapter2_quiz_4, R.string.chapter2_quiz_5)
 
-    private val optionAs = arrayOf(R.string.chapter1_quiz_1_a, R.string.chapter1_quiz_2_a, R.string.chapter1_quiz_3_a,
-            R.string.chapter1_quiz_4_a, R.string.chapter1_quiz_5_a)
+    private val optionAs = arrayOf(R.string.chapter2_quiz_1_a, R.string.chapter2_quiz_2_a, R.string.chapter2_quiz_3_a,
+            R.string.chapter2_quiz_4_a, R.string.chapter2_quiz_5_a)
 
-    private val optionBs = arrayOf(R.string.chapter1_quiz_1_b, R.string.chapter1_quiz_2_b, R.string.chapter1_quiz_3_b,
-            R.string.chapter1_quiz_4_b, R.string.chapter1_quiz_5_b)
+    private val optionBs = arrayOf(R.string.chapter2_quiz_1_b, R.string.chapter2_quiz_2_b, R.string.chapter2_quiz_3_b,
+            R.string.chapter2_quiz_4_b, R.string.chapter2_quiz_5_b)
 
-    private val optionCs = arrayOf(R.string.chapter1_quiz_1_c, R.string.chapter1_quiz_2_c, R.string.chapter1_quiz_3_c,
-            R.string.chapter1_quiz_4_c, R.string.chapter1_quiz_5_c)
+    private val optionCs = arrayOf(R.string.chapter2_quiz_1_c, R.string.chapter2_quiz_2_c, R.string.chapter2_quiz_3_c,
+            R.string.chapter2_quiz_4_c, R.string.chapter2_quiz_5_c)
 
-    private val optionDs = arrayOf(R.string.chapter1_quiz_1_d, R.string.chapter1_quiz_2_d, R.string.chapter1_quiz_3_d,
-            R.string.chapter1_quiz_4_d, R.string.chapter1_quiz_5_d)
+    private val optionDs = arrayOf(R.string.chapter2_quiz_1_d, R.string.chapter2_quiz_2_d, R.string.chapter2_quiz_3_d,
+            R.string.chapter2_quiz_4_d, R.string.chapter2_quiz_5_d)
 
-    private val answers = arrayOf(R.string.chapter1_quiz_1_a, R.string.chapter1_quiz_2_c, R.string.chapter1_quiz_3_d,
-            R.string.chapter1_quiz_4_b, R.string.chapter1_quiz_5_d)
+    private val answers = arrayOf(R.string.chapter2_quiz_1_c, R.string.chapter2_quiz_2_d, R.string.chapter2_quiz_3_a,
+            R.string.chapter2_quiz_4_a, R.string.chapter2_quiz_5_c)
 
     private lateinit var pepeHelper: PepeTeachesKotlinHelper
 
@@ -47,7 +49,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_basic_types_quiz)
+        setContentView(R.layout.activity_control_flow_quiz)
 
         pepeHelper = PepeTeachesKotlinHelper()
 
@@ -173,11 +175,10 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun finishQuiz() {
-        sharedPreferences.set("BasicQuizComplete", true)
+        sharedPreferences.set("ControlFlowQuizComplete", true)
         Toast.makeText(this, "You have completed Control Flow Quiz!", Toast.LENGTH_LONG).show()
         pepeHelper.throwConfetti(konfetti)
         finishActivity(998)
     }
 
 }
-

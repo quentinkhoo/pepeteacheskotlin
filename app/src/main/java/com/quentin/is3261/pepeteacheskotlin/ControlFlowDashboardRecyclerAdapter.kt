@@ -20,9 +20,10 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
     }
 
     private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.when_statement, R.drawable.for_loop,
-            R.drawable.while_loop, R.drawable.return_icon, R.drawable.break_and_continue)
+            R.drawable.while_loop, R.drawable.return_icon, R.drawable.break_and_continue, R.drawable.quiz_icon)
 
-    private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return", "Break & Continue")
+    private val itemTitles = arrayOf("If-Else", "When", "For Loop", "While Loop", "Return",
+            "Break & Continue", "Control Flow Quiz")
 
     lateinit var sharedPreferences: SharedPreferences
 
@@ -77,6 +78,10 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                         5 -> {
                             myIntent = Intent(context, ControlFlowContBreakLessonActivity::class.java)
                             (context as Activity).startActivity(myIntent)
+                        }
+                        6 -> {
+                            myIntent = Intent(context, ControlFlowQuizActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }
