@@ -5,24 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BasicTypesNumbersLessonPart2">
+    tools:context=".ControlFlowContBreakLessonPart1">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView19"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="#fdfcfc"
-        android:text="@string/chapter1_lesson_numbers_part2_1" />
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/chapter2_lesson_contbreak" />
 
-    <ImageView
-        android:id="@+id/numbersLessonImage1"
+    <TextView
+        android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
+        android:textColor="@color/white"
+        android:text="@string/chapter2_lesson_contbreak_part1" />
+
+    <ImageView
+        android:id="@+id/contBreakLessonImage1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
         android:clickable="true"
         android:focusable="true"
         android:scaleType="fitStart"
-        android:src="@drawable/numbers_lesson1" />
-
+        android:src="@drawable/contbreak_lesson1" />
 </LinearLayout>

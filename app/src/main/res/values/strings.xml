@@ -108,4 +108,44 @@
         by providing \",\" inside the checks as follows.</string>
     <string name="chapter2_lesson_when_part4">Running the above piece of code would yield the following output</string>
 
+    <string name="chapter2_lesson_forloop">For Loop</string>
+    <string name="chapter2_lesson_forloop_part1">Loop is a statement that provides the flexibility
+        to iterate through any kind of data structure. Like other programming languages, Kotlin also
+        provides many kinds of Looping methodology, however, among them \"<b>For</b>\" is the most
+        common one. The implementation and use of a "For" loop is conceptually similar to Java for loop.
+        The following example shows how for loops can be used.</string>
+    <string name="chapter2_lesson_forloop_part2">In the above piece of code, we have declared a list
+        called "items" and using the for loop we are iterating through that defined list and printing
+        its value with the output as shown below.</string>
+    <string name="chapter2_lesson_forloop_part3">The following is another example of using for loops</string>
+    <string name="chapter2_lesson_forloop_part4">Once we compile and execute the above piece of code,
+        it will yield the following output.</string>
+
+    <string name="chapter2_lesson_whileloop">While Loop and Do-While Loop</string>
+    <string name="chapter2_lesson_whileloop_part1">While and Do-While loops work in a similar way
+        like they do in other programming languages. The following example shows the usage of
+        the <b>While loop</b>.</string>
+    <string name="chapter2_lesson_whileloop_part2">The previous piece of code yields the following output</string>
+    <string name="chapter2_lesson_whileloop_part3">Kotlin also has another loop called the Do-While loop,
+        where the loop body will be executed once, and only then will the condition be checked.
+        The following example shows the usage of the Do-while loop.</string>
+    <string name="chapter2_lesson_whileloop_part4">The previous piece of code yields the following output.
+        In the above code, the Kotlin compiler will execute the <b>DO</b> block, followed by condition
+        checking in the while block.</string>
+
+    <string name="chapter2_lesson_return">Return</string>
+    <string name="chapter2_lesson_return_part1">Return is a keyword that returns some value to the
+        calling function from the called function.</string>
+    <string name="chapter2_lesson_return_part2">In the above piece of code, we are calling another 
+        function and multiplying the input with 2, and returning the resultant value to the called 
+        function that is our main function.</string>
+
+    <string name="chapter2_lesson_contbreak">Continue &amp; Break</string>
+    <string name="chapter2_lesson_contbreak_part1">In Kotlin, the \"break\" keyword terminates the
+        controller flow if some condition fails and \"continue\" does the opposite.
+        Labels can also be applied as shown below.</string>
+    <string name="chapter2_lesson_contbreak_part2">The previous piece of code yields the following output</string>
+    <string name="chapter2_lesson_contbreak_part3">As you can see, the controller continues the loop,
+        until the value of x is 5. Once the value of x reaches 5, it starts executing the if block
+        and once the break statement is reached, the entire control flow terminates the program execution.</string>
 </resources>

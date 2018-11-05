@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ControlFlowWhenLessonActivity">
+    tools:context=".ControlFlowForLoopLessonActivity">
 
     <ImageView
         android:id="@+id/pepebackground"
@@ -30,7 +30,7 @@
     -->
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/when_viewpager"
+        android:id="@+id/for_loop_viewpager"
         android:layout_width="wrap_content"
         android:layout_height="248dp"
         android:layout_centerInParent="false"

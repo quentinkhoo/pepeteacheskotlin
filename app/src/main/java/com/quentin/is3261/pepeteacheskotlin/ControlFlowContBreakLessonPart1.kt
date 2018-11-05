@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_control_flow_if_else_lesson_part3.view.*
+import kotlinx.android.synthetic.main.fragment_basic_types_numbers_lesson_part2.view.*
+import kotlinx.android.synthetic.main.fragment_control_flow_cont_break_lesson_part1.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,25 +20,23 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class ControlFlowIfElseLessonPart3 : Fragment() {
+class ControlFlowContBreakLessonPart1 : Fragment() {
 
-    private val ifElseLessonImageUrl = "https://www.tutorialspoint.com/tpcg.php?p=3zdnlU"
+    private val url = "https://www.tutorialspoint.com/tpcg.php?p=TdGTLL"
 
     companion object {
-        fun newInstance() = ControlFlowIfElseLessonPart3()
+        fun newInstance() = ControlFlowContBreakLessonPart1()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val myView = inflater.inflate(R.layout.fragment_control_flow_if_else_lesson_part3, container, false)
-
-        myView.ifelseLessonImage1.setOnClickListener {
+        val myView = inflater.inflate(R.layout.fragment_control_flow_cont_break_lesson_part1, container, false)
+        myView.contBreakLessonImage1.setOnClickListener {
             val urlIntent = Intent(context, TryKotlinActivity::class.java)
-            urlIntent.putExtra("KotlinUrl", ifElseLessonImageUrl)
+            urlIntent.putExtra("KotlinUrl", url)
             startActivity(urlIntent)
         }
-
         return myView
     }
 

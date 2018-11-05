@@ -5,29 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ControlFlowWhenLessonPart4">
+    tools:context=".ControlFlowForLoopLessonPart3">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/whenLessonImage3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:src="@drawable/when_lesson3" />
-
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:textColor="@color/white"
-        android:text="@string/chapter2_lesson_when_part4" />
+        android:text="@string/chapter2_lesson_forloop_part3" />
 
     <ImageView
-        android:id="@+id/whenLessonImage4"
+        android:id="@+id/forloopLesson2Image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/forloop_lesson3" />
+
+    <TextView
+        android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/when_lesson4" />
+        android:textColor="@color/white"
+        android:text="@string/chapter2_lesson_forloop_part4" />
+
+    <ImageView
+        android:id="@+id/forloopLesson2Image2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:src="@drawable/forloop_lesson4" />
 </LinearLayout>

@@ -34,11 +34,17 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".BasicTypesCharactersLessonActivity" />
         <activity android:name=".BasicTypesQuizActivity" />
+        <activity
+            android:name=".TryKotlinActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".BasicTypeBooleanLessonActivity" />
-        <activity android:name=".TryKotlinActivity" />
         <activity android:name=".ControlFlowActivity" />
         <activity android:name=".ControlFlowIfElseLessonActivity" />
         <activity android:name=".ControlFlowWhenLessonActivity" />
+        <activity android:name=".ControlFlowForLoopLessonActivity" />
+        <activity android:name=".ControlFlowWhileLoopLessonActivity" />
+        <activity android:name=".ControlFlowReturnLessonActivity" />
+        <activity android:name=".ControlFlowContBreakLessonActivity"></activity>
         <activity android:name=".BasicTypesStringLessonActivity" />
         <activity android:name=".BasicTypesArraysLessonActivity"></activity>
     </application>
