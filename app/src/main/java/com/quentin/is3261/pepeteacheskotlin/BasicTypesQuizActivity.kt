@@ -106,7 +106,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -118,7 +118,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -130,7 +130,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -142,7 +142,7 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()

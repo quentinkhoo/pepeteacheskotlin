@@ -1,5 +1,6 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -38,9 +39,11 @@ class ControlFlowActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE) {
-            intent.putExtra("finishedControlFlowQuiz", data?.getBooleanExtra("finishedControlFlowQuiz", false))
+        if (requestCode == ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE
+                && resultCode == Activity.RESULT_OK) {
+            val myIntent = Intent()
+            myIntent.putExtra("finishedControlFlowQuiz", data?.getBooleanExtra("finishedControlFlowQuiz", false))
+            setResult(Activity.RESULT_OK, myIntent)
             finish()
         }
     }

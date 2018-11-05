@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.support.v7.widget.CardView
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.animation.AnimationUtils
 import android.widget.Adapter
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -49,19 +50,28 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE ||
                 requestCode == ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE) {
-            adapter.notifyDataSetChanged()
 
             //Toast.makeText(this, data?.getBooleanExtra("finishedBasicQuiz", false).toString(), Toast.LENGTH_LONG).show()
             if (resultCode == Activity.RESULT_OK && data?.getBooleanExtra("finishedBasicQuiz", false) == true) {
-                Toast.makeText(this, data.getBooleanExtra("finishedBasicQuiz", false).toString(), Toast.LENGTH_LONG).show()
                 val konfettiView = findViewById<KonfettiView>(R.id.konfettiView)
                 pepeHelper.throwConfetti(konfettiView)
+                runLayoutAnimation(recyclerView)
             }
 
             if (resultCode == Activity.RESULT_OK && data?.getBooleanExtra("finishedControlFlowQuiz", false) == true) {
                 val konfettiView = findViewById<KonfettiView>(R.id.konfettiView)
                 pepeHelper.throwConfetti(konfettiView)
+                runLayoutAnimation(recyclerView)
             }
         }
+    }
+
+    private fun runLayoutAnimation(recyclerView: RecyclerView) {
+        val context = recyclerView.context
+        val controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down)
+
+        recyclerView.layoutAnimation = controller
+        recyclerView.adapter.notifyDataSetChanged()
+        recyclerView.scheduleLayoutAnimation()
     }
 }

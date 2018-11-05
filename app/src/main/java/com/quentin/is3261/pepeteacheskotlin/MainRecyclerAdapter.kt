@@ -13,6 +13,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
+import android.view.animation.AnimationUtils
+import android.view.animation.LayoutAnimationController
+
+
 
 class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>() {
 
