@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:scaleType="fitXY"
+        android:scaleType="fitStart"
         android:src="@drawable/arrays_lesson2" />
 
 </LinearLayout>

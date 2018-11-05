@@ -3,6 +3,8 @@
     <color name="colorPrimary">#00796B</color>
     <color name="colorPrimaryDark">#00695C</color>
     <color name="colorAccent">#64FFDA</color>
+    <color name="materialgraybackground">#424250</color>
+    <color name="materialgrayforeground">#33333d</color>
     <color name="purple">#7c4dff</color>
     <color name="yellow">#ffb300</color>
     <color name="green">#00bfa5</color>
