@@ -31,12 +31,18 @@
                     android:scaleType="fitStart"
                     app:srcCompat="@drawable/smug_pepe" />
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyle"
+                <ImageView
+                    android:id="@+id/ar_button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_weight="2"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/ar_button" />
+
+
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

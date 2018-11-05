@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.animation.AnimationUtils
 import android.widget.Adapter
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
@@ -29,14 +30,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var layoutManager: RecyclerView.LayoutManager
     lateinit var adapter: MainRecyclerAdapter
-    lateinit var progressBar: ProgressBar
     lateinit var pepeHelper: PepeTeachesKotlinHelper
+
+    lateinit var arButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        progressBar = findViewById(R.id.progressBar)
 
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
         layoutManager = LinearLayoutManager(this)
@@ -45,6 +45,12 @@ class MainActivity : AppCompatActivity() {
         adapter = MainRecyclerAdapter(this)
         recyclerView.adapter = adapter
         pepeHelper = PepeTeachesKotlinHelper()
+
+        arButton = findViewById<ImageView>(R.id.ar_button)
+        arButton.setOnClickListener{
+            val arIntent = Intent(this, ARActivity::class.java)
+            startActivity(arIntent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
