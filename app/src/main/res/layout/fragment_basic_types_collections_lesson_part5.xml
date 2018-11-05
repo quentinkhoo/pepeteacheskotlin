@@ -10,7 +10,7 @@
     android:id="@+id/collectionsLesson5Text"
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="1"
+    android:layout_weight="0.25"
     android:textColor="#fdfcfc"
     android:text="@string/chapter1_lesson_collections_part5" />
 
