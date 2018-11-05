@@ -1,5 +1,6 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
@@ -33,6 +34,14 @@ class ControlFlowActivity : AppCompatActivity() {
             true
         } else {
             super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE) {
+            intent.putExtra("finishedControlFlowQuiz", data?.getBooleanExtra("finishedControlFlowQuiz", false))
+            finish()
         }
     }
 }

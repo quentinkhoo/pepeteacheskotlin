@@ -1,5 +1,7 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.app.Activity
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -178,7 +180,9 @@ class BasicTypesQuizActivity : AppCompatActivity(), View.OnClickListener {
     private fun finishQuiz() {
         sharedPreferences.set("BasicQuizComplete", true)
         Toast.makeText(this, "You have completed Basic Types Quiz!", Toast.LENGTH_LONG).show()
-        finishActivity(DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE)
+        val myIntent = Intent()
+        myIntent.putExtra("finishedBasicQuiz", true)
+        setResult(Activity.RESULT_OK, myIntent)
         finish()
     }
 

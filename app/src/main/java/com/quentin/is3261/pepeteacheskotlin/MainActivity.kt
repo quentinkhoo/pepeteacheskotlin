@@ -1,5 +1,6 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -14,6 +15,7 @@ import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 import kotlinx.android.synthetic.main.activity_main.view.*
+import nl.dionsegijn.konfetti.KonfettiView
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var layoutManager: RecyclerView.LayoutManager
     lateinit var adapter: MainRecyclerAdapter
     lateinit var progressBar: ProgressBar
+    lateinit var pepeHelper: PepeTeachesKotlinHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,11 +43,25 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         adapter = MainRecyclerAdapter(this)
         recyclerView.adapter = adapter
+        pepeHelper = PepeTeachesKotlinHelper()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == QUIZ_REQUEST_CODE) {
+        if (requestCode == DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE ||
+                requestCode == ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE) {
             adapter.notifyDataSetChanged()
+
+            //Toast.makeText(this, data?.getBooleanExtra("finishedBasicQuiz", false).toString(), Toast.LENGTH_LONG).show()
+            if (resultCode == Activity.RESULT_OK && data?.getBooleanExtra("finishedBasicQuiz", false) == true) {
+                Toast.makeText(this, data.getBooleanExtra("finishedBasicQuiz", false).toString(), Toast.LENGTH_LONG).show()
+                val konfettiView = findViewById<KonfettiView>(R.id.konfettiView)
+                pepeHelper.throwConfetti(konfettiView)
+            }
+
+            if (resultCode == Activity.RESULT_OK && data?.getBooleanExtra("finishedControlFlowQuiz", false) == true) {
+                val konfettiView = findViewById<KonfettiView>(R.id.konfettiView)
+                pepeHelper.throwConfetti(konfettiView)
+            }
         }
     }
 }
