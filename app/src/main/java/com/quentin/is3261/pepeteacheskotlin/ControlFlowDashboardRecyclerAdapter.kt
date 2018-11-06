@@ -16,7 +16,7 @@ import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.Adapter<ControlFlowDashboardRecyclerAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 998
+        val CONTROL_FLOW_REQUEST_CODE = 9998
     }
 
     private val itemImages = intArrayOf(R.drawable.if_else, R.drawable.when_statement, R.drawable.for_loop,
@@ -81,7 +81,7 @@ class ControlFlowDashboardRecyclerAdapter(val context: Context) : RecyclerView.A
                         }
                         6 -> {
                             myIntent = Intent(context, ControlFlowQuizActivity::class.java)
-                            (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, CONTROL_FLOW_REQUEST_CODE)
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }

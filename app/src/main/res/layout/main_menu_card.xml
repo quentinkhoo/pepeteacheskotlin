@@ -34,8 +34,10 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/itemImage"
+            android:fontFamily="@font/pixel_font_1"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ImageView

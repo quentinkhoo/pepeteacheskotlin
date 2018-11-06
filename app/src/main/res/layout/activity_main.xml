@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,47 +7,68 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:cardBackgroundColor="@color/materialgraybackground">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/materialgraybackground">
 
-            <ImageView
-                android:id="@+id/imageViewMain"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:scaleType="fitStart"
-                app:srcCompat="@drawable/smug_pepe" />
+                android:orientation="horizontal">
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/imageViewMain"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:scaleType="fitStart"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/smug_pepe" />
+
+                <ImageView
+                    android:id="@+id/ar_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_weight="2"
+                    android:scaleType="fitStart"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/ar_button" />
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:cardBackgroundColor="@color/materialgrayforeground">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewMain"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+                android:layoutAnimation="@anim/layout_animation_fall_down">
 
-    <android.support.v7.widget.CardView
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/konfettiView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        app:cardBackgroundColor="@color/materialgrayforeground">
+        android:layout_height="match_parent"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        </android.support.v7.widget.RecyclerView>
-    </android.support.v7.widget.CardView>
-
-</LinearLayout>
+</RelativeLayout>
 

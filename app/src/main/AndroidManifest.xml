@@ -20,44 +20,61 @@
             android:name="com.google.ar.core"
             android:value="required" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ARActivity" />
-        <activity android:name=".Lesson2Activity" />
-        <activity android:name=".BasicTypesActivity" />
-        <activity android:name=".BasicTypesNumbersLessonActivity" />
+        <activity android:name=".ARActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Lesson2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesNumbersLessonActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".TestActivity" />
-        <activity android:name=".BasicTypesCharactersLessonActivity" />
-        <activity android:name=".BasicTypesQuizActivity" />
+        <activity android:name=".BasicTypesCharactersLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesQuizActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".TryKotlinActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".BasicTypeBooleanLessonActivity" />
-        <activity android:name=".ControlFlowActivity" />
-        <activity android:name=".ControlFlowIfElseLessonActivity" />
-        <activity android:name=".ControlFlowWhenLessonActivity" />
-        <activity android:name=".ControlFlowForLoopLessonActivity" />
-        <activity android:name=".ControlFlowWhileLoopLessonActivity" />
-        <activity android:name=".ControlFlowReturnLessonActivity" />
-        <activity android:name=".ControlFlowContBreakLessonActivity" />
-        <activity android:name=".BasicTypesStringLessonActivity" />
-        <activity android:name=".BasicTypesArraysLessonActivity" />
-        <activity android:name=".BasicTypesCollectionsLessonActivity" />
-        <activity android:name=".BasicTypesRangesLessonActivity" />
-        <activity android:name=".ControlFlowQuizActivity" />
+        <activity android:name=".BasicTypeBooleanLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowIfElseLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowWhenLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowForLoopLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowWhileLoopLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowReturnLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowContBreakLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesStringLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesArraysLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesCollectionsLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicTypesRangesLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlFlowQuizActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ClassObjectActivity" />
         <activity android:name=".ClassObjectNestedClassLessonActivity" />
-        <activity
-            android:name=".ClassObjectInnerClassActivity"
-            android:label="@string/title_activity_class_object_inner_class"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ClassObjectInnerClassLessonActivity" />
-        <activity android:name=".ClassObjectTypeAliasesLessonActivity"></activity>
+        <activity android:name=".ClassObjectTypeAliasesLessonActivity"/>
     </application>
 
 </manifest>

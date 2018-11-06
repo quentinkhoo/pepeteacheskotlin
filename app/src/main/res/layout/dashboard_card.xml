@@ -31,9 +31,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Title"
+            android:fontFamily="@font/pixel_font_1"
             android:layout_gravity="center"
             android:textColor="#616161"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold"/>
 
 

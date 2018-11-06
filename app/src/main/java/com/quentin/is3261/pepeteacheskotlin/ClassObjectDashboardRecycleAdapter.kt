@@ -15,7 +15,7 @@ import android.widget.Toast
 class ClassObjectDashboardRecycleAdapter(val context: Context) : RecyclerView.Adapter<ClassObjectDashboardRecycleAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 998
+        val CLASS_OBJECT_REQUEST_CODE = 9998
     }
 
     private val itemImages = intArrayOf(R.drawable.nested_class, R.drawable.inner_class,
@@ -67,7 +67,10 @@ class ClassObjectDashboardRecycleAdapter(val context: Context) : RecyclerView.Ad
                             //context.startActivity(myIntent);
                             (context as Activity).startActivity(myIntent)
                         }
-
+                        3 -> {
+                            myIntent = Intent(context, ControlFlowQuizActivity::class.java)
+                            (context as Activity).startActivityForResult(myIntent, ClassObjectDashboardRecycleAdapter.CLASS_OBJECT_REQUEST_CODE)
+                        }
 
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
                     }

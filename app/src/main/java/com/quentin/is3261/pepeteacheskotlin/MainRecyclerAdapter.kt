@@ -13,18 +13,23 @@ import android.widget.TextView
 import android.widget.Toast
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
+import android.view.animation.AnimationUtils
+import android.view.animation.LayoutAnimationController
+
+
 
 class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>() {
 
     companion object {
-        val REQUEST_CODE = 999
+        val BASIC_QUIZ_REQUEST_CODE = 999
+        val CONTROL_FLOW_REQUEST_CODE = 998
     }
 
     private val itemImages = intArrayOf(R.drawable.thinking_pepe, R.drawable.party_pepe, R.drawable.pepe_oop,
             R.drawable.stressed_out_pepe_2, R.drawable.retarded_pepe)
 
-    private val itemTitles = arrayOf("Try out Kotlin!", "Lesson 1: Basic Types", "Lesson 2: Control Flow", "Lesson 3: Class & Object",
-            "Augmented Reality: Enter Pepe Land")
+    private val itemTitles = arrayOf("Try out Kotlin!", "Chapter 1: Basic Types", "Chapter 2: Control Flow",
+            "Chapter 3: Class & Object")
 
     private val unlockedIcon = R.drawable.icon_unlock
 
@@ -46,8 +51,7 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemImage.setImageResource(itemImages.get(position))
         holder.itemTitle.text = itemTitles.get(position)
-        if (position == 0)
-            holder.itemUnlock.setImageResource(unlockedIcon)
+
         if (position == 1)
             holder.itemUnlock.setImageResource(unlockedIcon)
         if (position == 2)
@@ -57,11 +61,6 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                 holder.itemUnlock.setImageResource(lockedIcon)
         if (position == 3)
             if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true)
-                holder.itemUnlock.setImageResource(unlockedIcon)
-            else
-                holder.itemUnlock.setImageResource(lockedIcon)
-        if (position == 4)
-            if (sharedPreferences.get("BasicQuizComplete")?: false == true)
                 holder.itemUnlock.setImageResource(unlockedIcon)
             else
                 holder.itemUnlock.setImageResource(lockedIcon)
@@ -88,13 +87,12 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                         }
                         1 -> {
                             myIntent = Intent(context, BasicTypesActivity::class.java)
-                            //context.startActivity(myIntent);
-                            (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                            (context as Activity).startActivityForResult(myIntent, DashboardRecyclerAdapter.BASIC_QUIZ_REQUEST_CODE)
                         }
                         2 -> {
                             if (sharedPreferences.get("BasicQuizComplete")?: false == true) {
                                 myIntent = Intent(context, ControlFlowActivity::class.java)
-                                (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                                (context as Activity).startActivityForResult(myIntent, ControlFlowDashboardRecyclerAdapter.CONTROL_FLOW_REQUEST_CODE)
                             } else {
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
                             }
@@ -102,17 +100,9 @@ class MainRecyclerAdapter(val context: Context) : RecyclerView.Adapter<MainRecyc
                         3 -> {
                             if (sharedPreferences.get("ControlFlowQuizComplete")?: false == true) {
                                 myIntent = Intent(context, ClassObjectActivity::class.java)
-                                (context as Activity).startActivityForResult(myIntent, REQUEST_CODE)
+                                (context as Activity).startActivityForResult(myIntent, ClassObjectDashboardRecycleAdapter.CLASS_OBJECT_REQUEST_CODE)
                             } else {
                                 Toast.makeText(context, "You have yet to finish the previous lesson", Toast.LENGTH_LONG).show()
-                            }
-                        }
-                        4 -> {
-                            myIntent = Intent(context, ARActivity::class.java)
-                            if (sharedPreferences.get("BasicQuizComplete", false) == true) {
-                                (context as Activity).startActivity(myIntent)
-                            } else {
-                                Toast.makeText(context, "You have yet to unlock AR Mode.", Toast.LENGTH_LONG).show()
                             }
                         }
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()

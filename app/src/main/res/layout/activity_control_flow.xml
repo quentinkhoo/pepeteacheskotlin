@@ -23,7 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Lessons"
+                android:text="Control Flow"
+                android:fontFamily="@font/pixel_font_1"
                 android:textAlignment="center"
                 android:textColor="@color/cardview_light_background"
                 android:textSize="32sp" />

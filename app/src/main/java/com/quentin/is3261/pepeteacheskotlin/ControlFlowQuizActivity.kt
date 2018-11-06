@@ -1,5 +1,7 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.app.Activity
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -103,7 +105,7 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -115,7 +117,7 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -127,7 +129,7 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -139,7 +141,7 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
                         currentQuestion++
                         setUpQuestion(currentQuestion)
                     } else {
-                        unhideButton()
+                        finishQuiz()
                     }
                 } else {
                     wrongAnswerStuff()
@@ -177,8 +179,10 @@ class ControlFlowQuizActivity : AppCompatActivity(), View.OnClickListener {
     private fun finishQuiz() {
         sharedPreferences.set("ControlFlowQuizComplete", true)
         Toast.makeText(this, "You have completed Control Flow Quiz!", Toast.LENGTH_LONG).show()
-        pepeHelper.throwConfetti(konfetti)
-        finishActivity(998)
+        val myIntent = Intent()
+        myIntent.putExtra("finishedControlFlowQuiz", true)
+        setResult(Activity.RESULT_OK, myIntent)
+        finish()
     }
 
 }
