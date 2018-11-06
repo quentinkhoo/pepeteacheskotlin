@@ -205,5 +205,7 @@
         In the following example, we will create an interface andwe will create an object of that interface using Anonymous Inner class mechanism.</string>
     <string name="chapter3_lesson_inner_class4">The previous piece of code will yield the following output in the browser.</string>
     <string name="inner_class_intro2">Anonymous Inner Class</string>
+    <string name="chapter3_lesson_type_aliases1">Type aliases are a property of Kotlin compiler. It provides the flexibility of creating a new name of an existing type, it does not create a new type. If the type name is too long, you can easily introduce a shorter name and use the same for future usage.
+        Type aliases is really helpful for complex type. \n\nIn the latest version, Kotlin revoked the support for type aliases, however, if you are using an old version of Kotlin you may have use it like the following −</string>
 
 </resources>

@@ -56,7 +56,8 @@
             android:name=".ClassObjectInnerClassActivity"
             android:label="@string/title_activity_class_object_inner_class"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ClassObjectInnerClassLessonActivity"></activity>
+        <activity android:name=".ClassObjectInnerClassLessonActivity" />
+        <activity android:name=".ClassObjectTypeAliasesLessonActivity"></activity>
     </application>
 
 </manifest>

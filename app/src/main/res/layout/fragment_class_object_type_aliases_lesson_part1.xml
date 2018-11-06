@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClassObjectTypeAliasesLessonPart1">
+
+
+    <TextView
+        android:id="@+id/typeAliasesText1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text="@string/chapter3_lesson_type_aliases1" />
+
+    <ImageView
+        android:id="@+id/typeAliasesLessonImage1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitStart"
+        android:src="@drawable/type_aliases_lesson1" />
+
+</LinearLayout>

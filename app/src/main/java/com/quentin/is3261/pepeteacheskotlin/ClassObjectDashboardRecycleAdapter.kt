@@ -62,6 +62,11 @@ class ClassObjectDashboardRecycleAdapter(val context: Context) : RecyclerView.Ad
                             //context.startActivity(myIntent);
                             (context as Activity).startActivity(myIntent)
                         }
+                        2 -> {
+                            myIntent = Intent(context, ClassObjectTypeAliasesLessonActivity::class.java)
+                            //context.startActivity(myIntent);
+                            (context as Activity).startActivity(myIntent)
+                        }
 
 
                         else -> Toast.makeText(context, "Coming Soon!", Toast.LENGTH_SHORT).show()
