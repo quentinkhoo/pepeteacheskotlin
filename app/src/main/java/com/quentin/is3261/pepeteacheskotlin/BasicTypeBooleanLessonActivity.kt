@@ -1,10 +1,12 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
@@ -59,9 +61,19 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
         return if (item?.itemId == android.R.id.home) {
             finish()
+            true
+        } else if (item?.itemId == R.id.infoMenuItem){
+            val myIntent = Intent(applicationContext, LessonTipsActivity::class.java)
+            startActivity(myIntent)
             true
         } else {
             super.onOptionsItemSelected(item)
@@ -70,8 +82,9 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
 
     private fun finishCharacterLesson() {
         sharedPreferences.set("CharacterLesson", true)
-        Toast.makeText(this, "You have finished Character Lesson!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "You have finished Boolean Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 }
