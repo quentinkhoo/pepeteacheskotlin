@@ -30,7 +30,7 @@ class BasicTypesNumbersLessonPart0 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_basic_types_numbers_lesson_part0, container, false)
 
         view.basictypes_intro.setText("")
-        view.basictypes_intro.setCharacterDelay(50)
+        view.basictypes_intro.setCharacterDelay(20)
         view.basictypes_intro.animateText(getString(R.string.chapter1_lesson_numbers_part0))
 
         return view

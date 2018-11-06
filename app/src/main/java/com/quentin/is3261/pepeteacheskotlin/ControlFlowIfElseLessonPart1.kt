@@ -30,7 +30,7 @@ class ControlFlowIfElseLessonPart1 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_control_flow_if_else_lesson_part1, container, false)
 
         view.ifelse_lesson_intro.setText("")
-        view.ifelse_lesson_intro.setCharacterDelay(50)
+        view.ifelse_lesson_intro.setCharacterDelay(20)
         view.ifelse_lesson_intro.animateText(getString(R.string.chapter2_lesson_ifelse_part1))
 
         return view
