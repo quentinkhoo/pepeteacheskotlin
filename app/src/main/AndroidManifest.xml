@@ -48,8 +48,10 @@
         <activity android:name=".BasicTypesStringLessonActivity" />
         <activity android:name=".BasicTypesArraysLessonActivity" />
         <activity android:name=".BasicTypesCollectionsLessonActivity" />
-        <activity android:name=".BasicTypesRangesLessonActivity"></activity>
-        <activity android:name=".ControlFlowQuizActivity"></activity>
+        <activity android:name=".BasicTypesRangesLessonActivity" />
+        <activity android:name=".ControlFlowQuizActivity" />
+        <activity android:name=".ClassObjectActivity" />
+        <activity android:name=".ClassObjectNestedClassLessonActivity"></activity>
     </application>
 
 </manifest>
