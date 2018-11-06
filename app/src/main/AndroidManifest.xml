@@ -20,57 +20,78 @@
             android:name="com.google.ar.core"
             android:value="required" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ARActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Lesson2Activity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesNumbersLessonActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lesson2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesNumbersLessonActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".TestActivity" />
-        <activity android:name=".BasicTypesCharactersLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesQuizActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BasicTypesCharactersLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesQuizActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TryKotlinActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".BasicTypeBooleanLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowIfElseLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowWhenLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowForLoopLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowWhileLoopLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowReturnLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowContBreakLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesStringLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesArraysLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesCollectionsLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BasicTypesRangesLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ControlFlowQuizActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BasicTypeBooleanLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowIfElseLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowWhenLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowForLoopLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowWhileLoopLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowReturnLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowContBreakLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesStringLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesArraysLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesCollectionsLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BasicTypesRangesLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ControlFlowQuizActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LessonTipsActivity"
+            android:theme="@style/Theme.CustomTranslucent"/>
     </application>
 
 </manifest>
