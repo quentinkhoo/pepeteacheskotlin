@@ -37,7 +37,7 @@
             android:fontFamily="@font/pixel_font_1"
             android:textColor="@color/white"
             android:textAllCaps="true"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ImageView
