@@ -1,14 +1,19 @@
 package com.quentin.is3261.pepeteacheskotlin
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.drawable.TransitionDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.widget.CardView
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.MotionEvent
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Adapter
 import android.widget.ImageView
@@ -24,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         val QUIZ_REQUEST_CODE = 999
     }
-
 
     lateinit var sharedPreferences: SharedPreferences
     lateinit var recyclerView: RecyclerView
@@ -47,9 +51,19 @@ class MainActivity : AppCompatActivity() {
         pepeHelper = PepeTeachesKotlinHelper()
 
         arButton = findViewById<ImageView>(R.id.ar_button)
+
         arButton.setOnClickListener{
-            val arIntent = Intent(this, ARActivity::class.java)
-            startActivity(arIntent)
+            val arButtonArray = arrayOf(resources.getDrawable(R.drawable.ar_button),
+                                                        resources.getDrawable(R.drawable.ar_button_on_touch))
+            val td: TransitionDrawable = TransitionDrawable(arButtonArray)
+            arButton.setImageDrawable(td)
+            td.startTransition(1000)
+
+            arButton.postDelayed({
+                val arIntent = Intent(this, ARActivity::class.java)
+                startActivity(arIntent)
+                td.reverseTransition(1000)
+            }, 1000)
         }
     }
 
