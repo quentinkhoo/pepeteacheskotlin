@@ -82,8 +82,9 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
 
     private fun finishCharacterLesson() {
         sharedPreferences.set("CharacterLesson", true)
-        Toast.makeText(this, "You have finished Character Lesson!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "You have finished Boolean Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 }

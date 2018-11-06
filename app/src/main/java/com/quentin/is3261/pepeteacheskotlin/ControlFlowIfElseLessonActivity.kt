@@ -98,6 +98,7 @@ class ControlFlowIfElseLessonActivity : AppCompatActivity() {
         sharedPreferences.set("IfElseLesson", true)
         Toast.makeText(this, "You have finished If-Else Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 

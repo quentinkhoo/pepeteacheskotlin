@@ -98,6 +98,7 @@ class ControlFlowForLoopLessonActivity : AppCompatActivity() {
         sharedPreferences.set("ForLoopLesson", true)
         Toast.makeText(this, "You have finished For Loop Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 

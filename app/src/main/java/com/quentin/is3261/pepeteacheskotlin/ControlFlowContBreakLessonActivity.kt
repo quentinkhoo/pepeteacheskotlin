@@ -98,6 +98,7 @@ class ControlFlowContBreakLessonActivity : AppCompatActivity() {
         sharedPreferences.set("ContBreak", true)
         Toast.makeText(this, "You have finished Continue & Break statement lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
     private fun hideUnhideButton(position: Int) {

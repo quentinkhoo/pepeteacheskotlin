@@ -98,6 +98,7 @@ class ControlFlowWhenLessonActivity : AppCompatActivity() {
         sharedPreferences.set("WhenLesson", true)
         Toast.makeText(this, "You have finished When Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 

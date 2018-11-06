@@ -98,6 +98,7 @@ class ControlFlowWhileLoopLessonActivity : AppCompatActivity() {
         sharedPreferences.set("WhileLoopLesson", true)
         Toast.makeText(this, "You have finished While Loop Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 

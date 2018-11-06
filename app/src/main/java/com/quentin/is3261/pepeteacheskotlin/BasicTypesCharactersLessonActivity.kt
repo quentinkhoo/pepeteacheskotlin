@@ -96,8 +96,9 @@ class BasicTypesCharactersLessonActivity : AppCompatActivity() {
 
     private fun finishCharacterLesson() {
         sharedPreferences.set("CharacterLesson", true)
-        Toast.makeText(this, "You have finished Character Lesson!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "You have finished Characters Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
     private fun hideUnhideButton(position: Int) {

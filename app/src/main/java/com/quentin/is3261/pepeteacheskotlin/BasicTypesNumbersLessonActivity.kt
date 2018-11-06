@@ -100,7 +100,7 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
     private fun finishNumberLesson() {
         sharedPreferences.set("NumberLesson", true)
         Toast.makeText(this, "You have finished Number Lesson!", Toast.LENGTH_LONG).show()
-        //pepeHelper.throwConfetti(konfetti)
+        finish()
     }
 
 
