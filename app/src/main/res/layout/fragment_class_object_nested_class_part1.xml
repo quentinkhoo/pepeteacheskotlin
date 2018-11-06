@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClassObjectNestedClassPart1">
+
+    <TextView
+        android:id="@+id/nestedClassText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text="@string/chapter3_lesson_nested_class1" />
+
+    <ImageView
+        android:id="@+id/nestedClassLessonImage1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/nested_class_lesson1" />
+
+    <TextView
+        android:id="@+id/nestedClassText2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text="@string/chapter3_lesson_nested_class2" />
+
+    <ImageView
+        android:id="@+id/nestedClassLessonImage2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/nested_class_lesson2" />
+
+
+
+</LinearLayout>

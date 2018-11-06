@@ -90,8 +90,17 @@
         <activity
             android:name=".ControlFlowQuizActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".ClassObjectActivity" 
+                  android:screenOrientation="portrait" />
+        <activity android:name=".ClassObjectNestedClassLessonActivity" 
+                  android:screenOrientation="portrait" />
+        <activity android:name=".ClassObjectInnerClassLessonActivity" 
+                  android:screenOrientation="portrait" />
+        <activity android:name=".ClassObjectTypeAliasesLessonActivity"
+                  android:screenOrientation="portrait" />
         <activity android:name=".LessonTipsActivity"
-            android:theme="@style/Theme.CustomTranslucent"/>
+                  android:screenOrientation="portrait" 
+                  android:theme="@style/Theme.CustomTranslucent"/>
     </application>
 
 </manifest>
