@@ -19,6 +19,11 @@ private const val ARG_PARAM2 = "param2"
  */
 class ClassObjectNestedClassPart1 : Fragment() {
 
+    private val url = "https://www.tutorialspoint.com/tpcg.php?p=TdGTLL"
+
+    companion object {
+        fun newInstance() = ClassObjectNestedClassPart1()
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment

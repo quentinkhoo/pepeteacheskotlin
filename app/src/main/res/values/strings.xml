@@ -192,5 +192,8 @@
         it provides an operator that helps you iterate through a range. Internally, it is implemented using <b>rangeTo()</b> and its operator form is <b>(..)</b>.</string>
     <string name="chapter1_lesson_ranges_part2">In the following example, we will see how Kotlin interprets this range operator.</string>
     <string name="chapter1_lesson_ranges_part3">The above piece of code yields the following output in the browser.</string>
+    <string name="chapter3_lesson_nested_class1">By definition, when a class has been created inside another class, then it is called as a nested class. In Kotlin, nested class is by default static, hence, it can be accessed without creating any object of that class.
+        In the following example, we will see how Kotlin interprets our nested class.</string>
+    <string name="chapter3_lesson_nested_class2">The above piece of code will yield the following output in the browser.</string>
 
 </resources>
