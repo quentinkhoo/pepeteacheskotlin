@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowIfElseLessonPart3 : Fragment() {
 
-    private val ifElseLessonImageUrl = "https://www.tutorialspoint.com/tpcg.php?p=3zdnlU"
+    private val ifElseLessonImageUrl = "https://pl.kotl.in/HkJFIu1am"
 
     companion object {
         fun newInstance() = ControlFlowIfElseLessonPart3()

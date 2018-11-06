@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowWhenLessonPart4 : Fragment() {
 
-    private val whenLessonImage3Url = "https://www.tutorialspoint.com/tpcg.php?p=8MFLuU"
+    private val whenLessonImage3Url = "https://pl.kotl.in/Syra8u1pX"
 
     companion object {
         fun newInstance() = ControlFlowWhenLessonPart4()

@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowReturnLessonPart1 : Fragment() {
 
-    private val url = "https://www.tutorialspoint.com/tpcg.php?p=WMgiYj"
+    private val url = "https://pl.kotl.in/SJJ9wOyaX"
 
     companion object {
         fun newInstance() = ControlFlowReturnLessonPart1()

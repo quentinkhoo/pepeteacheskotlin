@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class BasicTypeBooleanLessonFragment : Fragment() {
 
-    private val url = "https://www.tutorialspoint.com/tpcg.php?p=9G1XRI"
+    private val url = "https://pl.kotl.in/HkMRS_yTX"
 
     companion object {
         fun newInstance() = BasicTypeBooleanLessonFragment()

@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class BasicTypesNumbersLessonPart2 : Fragment() {
 
-    private val numbersLessonImage1Url = "https://www.tutorialspoint.com/tpcg.php?p=I5PPPE"
+    private val numbersLessonImage1Url = "https://pl.kotl.in/BJojHu1a7"
 
     companion object {
         fun newInstance() = BasicTypesNumbersLessonPart2()

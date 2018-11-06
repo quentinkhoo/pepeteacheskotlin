@@ -44,7 +44,7 @@ class BasicTypesNumbersLessonPart1 : Fragment() {
         myView.numberIntro.setCharacterDelay(150)
         myView.numberIntro.animateText(getString(R.string.chapter1_lesson_numbers_part1))
         */
-        myView.startAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_in))
+       // myView.startAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_in))
 
         return myView
     }

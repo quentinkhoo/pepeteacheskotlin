@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class BasicTypesCharactersLessonPart1 : Fragment() {
 
-    private val charactersLessonImageUrl = "https://www.tutorialspoint.com/tpcg.php?p=lpsUjc"
+    private val charactersLessonImageUrl = "https://pl.kotl.in/Sys2SuJTm"
 
 
     companion object {

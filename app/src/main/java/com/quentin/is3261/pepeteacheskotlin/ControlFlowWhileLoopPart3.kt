@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowWhileLoopPart3 : Fragment() {
 
-    private val url = "https://www.tutorialspoint.com/tpcg.php?p=An8NB9"
+    private val url = "https://pl.kotl.in/rksDvdJpm"
 
     companion object {
         fun newInstance() = ControlFlowWhileLoopPart3()

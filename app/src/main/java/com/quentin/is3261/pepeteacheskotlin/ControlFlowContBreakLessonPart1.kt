@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowContBreakLessonPart1 : Fragment() {
 
-    private val url = "https://www.tutorialspoint.com/tpcg.php?p=TdGTLL"
+    private val url = "https://pl.kotl.in/SyY6DO1Tm"
 
     companion object {
         fun newInstance() = ControlFlowContBreakLessonPart1()

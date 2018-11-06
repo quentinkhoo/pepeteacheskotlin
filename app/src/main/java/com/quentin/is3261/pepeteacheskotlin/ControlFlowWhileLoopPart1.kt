@@ -21,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ControlFlowWhileLoopPart1 : Fragment() {
 
-    private val url = "https://www.tutorialspoint.com/tpcg.php?p=XR720M"
+    private val url = "https://pl.kotl.in/r1DHw_kpX"
 
     companion object {
         fun newInstance() = ControlFlowWhileLoopPart1()
