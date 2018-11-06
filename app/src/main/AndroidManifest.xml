@@ -51,7 +51,12 @@
         <activity android:name=".BasicTypesRangesLessonActivity" />
         <activity android:name=".ControlFlowQuizActivity" />
         <activity android:name=".ClassObjectActivity" />
-        <activity android:name=".ClassObjectNestedClassLessonActivity"></activity>
+        <activity android:name=".ClassObjectNestedClassLessonActivity" />
+        <activity
+            android:name=".ClassObjectInnerClassActivity"
+            android:label="@string/title_activity_class_object_inner_class"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ClassObjectInnerClassLessonActivity"></activity>
     </application>
 
 </manifest>
