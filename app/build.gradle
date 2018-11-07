@@ -73,3 +73,9 @@ sceneform.asset('sampledata/autistic_pepe.obj',
         'default',
         'sampledata/autistic_pepe.sfa',
         'src/main/assets/autistic_pepe')
+
+
+sceneform.asset('sampledata/pepe_green.obj',
+        'default',
+        'sampledata/pepe_green.sfa',
+        'src/main/assets/pepe_green')

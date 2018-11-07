@@ -37,7 +37,7 @@
     file: 'sampledata/pepe obj.obj',
     name: 'pepe obj',
     recenter: 'root',
-    scale: 0.47666999999999998,
+    scale: 0.2,
   },
   version: '0.52:1',
 }
