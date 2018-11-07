@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import nl.dionsegijn.konfetti.KonfettiView
 
@@ -41,20 +42,27 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//
-//        viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
-//            override fun onPageScrollStateChanged(state: Int) {
-//
-//            }
-//
-//            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-//
-//            }
-//
-//            override fun onPageSelected(position: Int) {
-//
-//            }
-//        })
+
+        viewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+                if (position == 0) {
+                    if (sharedPreferences.get("hasPrompted", false)?:false == false) {
+                        val myIntent = Intent(applicationContext, LessonTipsActivity::class.java)
+                        startActivity(myIntent)
+                    }
+                    sharedPreferences.set("hasPrompted", true)
+                }
+
+            }
+        })
 
         doneButton.setOnClickListener {
             finishCharacterLesson()
@@ -81,7 +89,7 @@ class BasicTypeBooleanLessonActivity : AppCompatActivity() {
     }
 
     private fun finishCharacterLesson() {
-        sharedPreferences.set("CharacterLesson", true)
+        sharedPreferences.set("BooleanLesson", true)
         Toast.makeText(this, "You have finished Boolean Lesson!", Toast.LENGTH_LONG).show()
         //pepeHelper.throwConfetti(konfetti)
         finish()
