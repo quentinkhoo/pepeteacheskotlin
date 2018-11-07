@@ -27,7 +27,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/sceneform_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/angry_pepe" />
-
+        app:srcCompat="@drawable/baby_pepe" />
 
 </android.support.constraint.ConstraintLayout>

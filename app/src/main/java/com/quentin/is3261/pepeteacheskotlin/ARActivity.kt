@@ -18,6 +18,15 @@ import com.google.ar.sceneform.ux.TransformableNode
 import kotlinx.android.synthetic.main.activity_ar.*
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
 import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
+import android.graphics.Bitmap
+import android.os.Environment
+import android.os.Environment.getExternalStorageDirectory
+import java.io.File
+import java.io.FileOutputStream
+import java.util.*
+import android.content.Intent
+import android.content.SharedPreferences
+
 
 class ARActivity : AppCompatActivity() {
 
@@ -26,7 +35,7 @@ class ARActivity : AppCompatActivity() {
     private var isTracking: Boolean = false
     private var isHitting: Boolean = false
 
-    private var sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+    lateinit var sharedPreferences: SharedPreferences
 
     private var arrayOfPepes = arrayOf("pepe obj.sfb", "pepe_glow.sfb", "pepe_green.sfb")
 
@@ -35,6 +44,8 @@ class ARActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ar)
+
+        sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
 
         arFragment = sceneform_fragment as ArFragment
 
@@ -56,7 +67,6 @@ class ARActivity : AppCompatActivity() {
         }
         floatingActionButton.setOnClickListener { addObject(Uri.parse(uriString)) }
         showFab(false)
-
     }
 
     // Simple function to show/hide our FAB
@@ -176,5 +186,43 @@ class ARActivity : AppCompatActivity() {
         transformableNode.setParent(anchorNode)
         fragment.arSceneView.scene.addChild(anchorNode)
         transformableNode.select()
+    }
+
+    private fun takeScreenshot() {
+        val now = Date()
+        android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now)
+
+        try {
+            // image naming and path  to include sd card  appending name you choose for file
+            val mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpg"
+
+            // create bitmap screen capture
+            val v1 = window.decorView.rootView
+            v1.isDrawingCacheEnabled = true
+            val bitmap = Bitmap.createBitmap(v1.drawingCache)
+            v1.isDrawingCacheEnabled = false
+
+            val imageFile = File(mPath)
+
+            val outputStream = FileOutputStream(imageFile)
+            val quality = 100
+            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream)
+            outputStream.flush()
+            outputStream.close()
+
+            openScreenshot(imageFile)
+        } catch (e: Throwable) {
+            // Several error may come out with file handling or DOM
+            e.printStackTrace()
+        }
+
+    }
+
+    private fun openScreenshot(imageFile: File) {
+        val intent = Intent()
+        intent.action = Intent.ACTION_VIEW
+        val uri = Uri.fromFile(imageFile)
+        intent.setDataAndType(uri, "image/*")
+        startActivity(intent)
     }
 }
