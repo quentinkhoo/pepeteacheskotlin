@@ -39,6 +39,7 @@ class BasicTypesCharactersLessonPart1 : Fragment() {
             urlIntent.putExtra("KotlinUrl", charactersLessonImageUrl)
             startActivity(urlIntent)
         }
+
         return myView
     }
 

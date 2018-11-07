@@ -99,7 +99,6 @@
         <activity android:name=".ClassObjectTypeAliasesLessonActivity"
                   android:screenOrientation="portrait" />
         <activity android:name=".LessonTipsActivity"
-                  android:screenOrientation="portrait" 
                   android:theme="@style/Theme.CustomTranslucent"/>
     </application>
 

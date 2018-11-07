@@ -7,7 +7,7 @@ import android.preference.PreferenceManager
 
 object PepeSharedPreferences {
 
-    fun defaultPrefs(context: Context): SharedPreferences
+    fun defaultPrefs(context: Context?): SharedPreferences
             = PreferenceManager.getDefaultSharedPreferences(context)
 
     fun customPrefs(context: Context, name: String): SharedPreferences

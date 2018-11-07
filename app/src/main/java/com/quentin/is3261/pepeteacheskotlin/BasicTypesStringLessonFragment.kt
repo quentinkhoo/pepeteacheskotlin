@@ -37,6 +37,7 @@ class BasicTypesStringLessonFragment : Fragment() {
             urlIntent.putExtra("KotlinUrl", url)
             startActivity(urlIntent)
         }
+
         return myView
     }
 
