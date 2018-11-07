@@ -71,6 +71,7 @@ class ClassObjectDashboardRecycleAdapter(val context: Context) : RecyclerView.Ad
                                 (context as Activity).startActivity(myIntent)
                             }
                             3 -> {
+                                Toast.makeText(context, "Work still in progress", Toast.LENGTH_LONG).show()
                                 myIntent = Intent(context, ControlFlowQuizActivity::class.java)
                                 (context as Activity).startActivityForResult(myIntent, ClassObjectDashboardRecycleAdapter.CLASS_OBJECT_REQUEST_CODE)
                             }
