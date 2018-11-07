@@ -16,6 +16,8 @@ import com.google.ar.sceneform.rendering.ModelRenderable
 import com.google.ar.sceneform.ux.ArFragment
 import com.google.ar.sceneform.ux.TransformableNode
 import kotlinx.android.synthetic.main.activity_ar.*
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.set
+import com.quentin.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 
 class ARActivity : AppCompatActivity() {
 
@@ -23,6 +25,12 @@ class ARActivity : AppCompatActivity() {
 
     private var isTracking: Boolean = false
     private var isHitting: Boolean = false
+
+    private var sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+
+    private var arrayOfPepes = arrayOf("pepe obj.sfb", "pepe_glow.sfb", "pepe_green.sfb")
+
+    private var uriString: String = "pepe obj.sfb"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +47,14 @@ class ARActivity : AppCompatActivity() {
 
         // Set the onclick lister for our button
         // Change this string to point to the .sfb file of your choice :)
-        floatingActionButton.setOnClickListener { addObject(Uri.parse("pepe obj.sfb")) }
+        if (sharedPreferences.getBoolean("BasicQuizComplete", false) == true) {
+            uriString = arrayOfPepes.get(1)
+        }
+
+        if (sharedPreferences.getBoolean("ControlFlowQuizComplete", false) == true) {
+            uriString = arrayOfPepes.get(2)
+        }
+        floatingActionButton.setOnClickListener { addObject(Uri.parse(uriString)) }
         showFab(false)
 
     }

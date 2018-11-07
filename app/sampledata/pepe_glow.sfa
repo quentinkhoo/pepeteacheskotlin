@@ -1,0 +1,42 @@
+{
+  materials: [
+    {
+      name: '(null).001',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.025388999999999998,
+            0.64000000000000001,
+            0.016643000000000002,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.14280000000000001,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/pepe_glow.obj',
+    name: 'pepe_glow',
+    recenter: 'root',
+  },
+  version: '0.52:1',
+}

@@ -79,3 +79,8 @@ sceneform.asset('sampledata/pepe_green.obj',
         'default',
         'sampledata/pepe_green.sfa',
         'src/main/assets/pepe_green')
+
+sceneform.asset('sampledata/pepe_glow.obj',
+        'default',
+        'sampledata/pepe_glow.sfa',
+        'src/main/assets/pepe_glow')
