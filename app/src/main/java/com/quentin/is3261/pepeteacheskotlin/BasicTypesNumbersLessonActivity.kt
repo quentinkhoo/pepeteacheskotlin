@@ -60,6 +60,14 @@ class BasicTypesNumbersLessonActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
+
+                if (position == 2) {
+                    if (sharedPreferences.get("hasPrompted", false)?:false == false) {
+                        val myIntent = Intent(applicationContext, LessonTipsActivity::class.java)
+                        startActivity(myIntent)
+                    }
+                    sharedPreferences.set("hasPrompted", true)
+                }
                 hideUnhideButton(position)
             }
         })

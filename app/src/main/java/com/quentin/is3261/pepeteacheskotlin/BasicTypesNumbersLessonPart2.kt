@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_basic_types_numbers_lesson_part2.view.*
 
 
@@ -39,6 +40,7 @@ class BasicTypesNumbersLessonPart2 : Fragment() {
             urlIntent.putExtra("KotlinUrl", numbersLessonImage1Url)
             startActivity(urlIntent)
         }
+
         return myView
     }
 

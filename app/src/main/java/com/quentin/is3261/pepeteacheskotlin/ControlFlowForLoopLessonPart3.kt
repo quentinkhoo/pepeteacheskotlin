@@ -39,6 +39,7 @@ class ControlFlowForLoopLessonPart3 : Fragment() {
             urlIntent.putExtra("KotlinUrl", url)
             startActivity(urlIntent)
         }
+
         return myView
     }
 
