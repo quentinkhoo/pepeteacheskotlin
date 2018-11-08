@@ -25,7 +25,6 @@
         app:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/sceneform_fragment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/baby_pepe" />
 
