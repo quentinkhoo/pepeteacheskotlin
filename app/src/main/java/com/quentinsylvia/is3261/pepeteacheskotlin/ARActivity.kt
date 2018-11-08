@@ -1,5 +1,7 @@
 package com.quentinsylvia.is3261.pepeteacheskotlin
 
+import android.app.Activity
+import android.content.Context
 import android.graphics.Point
 import android.net.Uri
 import android.os.Bundle
@@ -21,11 +23,19 @@ import com.quentinsylvia.is3261.pepeteacheskotlin.PepeSharedPreferences.get
 import android.graphics.Bitmap
 import android.os.Environment
 import android.os.Environment.getExternalStorageDirectory
-import java.io.File
-import java.io.FileOutputStream
 import java.util.*
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Canvas
+import android.media.projection.MediaProjection
+import android.media.projection.MediaProjectionManager
+import android.provider.MediaStore
+import android.support.v4.content.FileProvider
+import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+import java.io.*
+import java.text.SimpleDateFormat
 
 
 class ARActivity : AppCompatActivity() {
@@ -34,6 +44,12 @@ class ARActivity : AppCompatActivity() {
 
     private var isTracking: Boolean = false
     private var isHitting: Boolean = false
+
+    private val REQUEST_IMAGE = 100
+    private lateinit var image: ImageView
+    private var filePath: String = ""
+    private lateinit var photoFile: File
+    private lateinit var projectionManager: MediaProjectionManager
 
     lateinit var sharedPreferences: SharedPreferences
 
@@ -46,6 +62,8 @@ class ARActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ar)
 
         sharedPreferences = PepeSharedPreferences.defaultPrefs(this)
+
+        image = findViewById<ImageView>(R.id.image)
 
         arFragment = sceneform_fragment as ArFragment
 
@@ -65,16 +83,29 @@ class ARActivity : AppCompatActivity() {
         if (sharedPreferences.getBoolean("ControlFlowQuizComplete", false) == true) {
             uriString = arrayOfPepes.get(2)
         }
+
         floatingActionButton.setOnClickListener { addObject(Uri.parse(uriString)) }
+        /*
+        cameraButton.setOnClickListener { ;
+            val bitmap = takescreenshot(window.decorView.rootView)
+            image.setImageBitmap(bitmap)
+            storeScreenshot(bitmap)
+
+        }
+        */
         showFab(false)
     }
 
     // Simple function to show/hide our FAB
     private fun showFab(enabled: Boolean) {
         if (enabled) {
+            //cameraButton.isEnabled = true
+            //cameraButton.visibility = View.VISIBLE
             floatingActionButton.isEnabled = true
             floatingActionButton.visibility = View.VISIBLE
         } else {
+            //cameraButton.isEnabled = false
+            //cameraButton.visibility = View.GONE
             floatingActionButton.isEnabled = false
             floatingActionButton.visibility = View.GONE
         }
@@ -188,41 +219,31 @@ class ARActivity : AppCompatActivity() {
         transformableNode.select()
     }
 
-    private fun takeScreenshot() {
-        val now = Date()
-        android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now)
-
-        try {
-            // image naming and path  to include sd card  appending name you choose for file
-            val mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpg"
-
-            // create bitmap screen capture
-            val v1 = window.decorView.rootView
-            v1.isDrawingCacheEnabled = true
-            val bitmap = Bitmap.createBitmap(v1.drawingCache)
-            v1.isDrawingCacheEnabled = false
-
-            val imageFile = File(mPath)
-
-            val outputStream = FileOutputStream(imageFile)
-            val quality = 100
-            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream)
-            outputStream.flush()
-            outputStream.close()
-
-            openScreenshot(imageFile)
-        } catch (e: Throwable) {
-            // Several error may come out with file handling or DOM
-            e.printStackTrace()
-        }
-
+    fun takescreenshot(v: View): Bitmap {
+        v.isDrawingCacheEnabled = true
+        v.buildDrawingCache(true)
+        val b = Bitmap.createBitmap(v.drawingCache)
+        v.isDrawingCacheEnabled = false
+        return b
     }
 
-    private fun openScreenshot(imageFile: File) {
-        val intent = Intent()
-        intent.action = Intent.ACTION_VIEW
-        val uri = Uri.fromFile(imageFile)
-        intent.setDataAndType(uri, "image/*")
-        startActivity(intent)
+    fun takescreenshotOfRootView(v: View): Bitmap {
+        return takescreenshot(v.rootView)
     }
+
+    fun storeScreenshot(bitmap: Bitmap) {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val filename = "IMG_" + timeStamp
+        val path = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        var out: FileOutputStream
+        val imageFile = File(path, filename + ".jpg")
+
+        out = FileOutputStream(imageFile)
+        // choose JPEG format
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
+        out.flush()
+        out.close()
+    }
+
+
 }
