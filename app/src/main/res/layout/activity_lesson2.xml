@@ -15,7 +15,7 @@
         android:src="@drawable/pepe_teaching_background"
         android:scaleType="fitXY"/>
 
-    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+    <com.quentinsylvia.is3261.pepeteacheskotlin.TypeWriter
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

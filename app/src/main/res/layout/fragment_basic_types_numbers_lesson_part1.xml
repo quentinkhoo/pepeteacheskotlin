@@ -7,7 +7,7 @@
     tools:context=".BasicTypesNumbersLessonPart1">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+    <com.quentinsylvia.is3261.pepeteacheskotlin.TypeWriter
         android:id="@+id/numberChapter"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,7 +18,7 @@
         android:textColor="#fdfcfc"
         android:text="@string/chapter1_lesson_numbers" />
 
-    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+    <com.quentinsylvia.is3261.pepeteacheskotlin.TypeWriter
         android:id="@+id/numberIntro"
         android:layout_width="match_parent"
         android:layout_height="0dp"

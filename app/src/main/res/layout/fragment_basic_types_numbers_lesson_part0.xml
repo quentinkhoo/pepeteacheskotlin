@@ -6,7 +6,7 @@
     tools:context=".BasicTypesNumbersLessonPart0">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.quentin.is3261.pepeteacheskotlin.TypeWriter
+    <com.quentinsylvia.is3261.pepeteacheskotlin.TypeWriter
         android:id="@+id/basictypes_intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
